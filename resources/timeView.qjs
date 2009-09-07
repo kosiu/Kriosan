@@ -1,0 +1,48 @@
+function setValue3(name, value) 
+{
+ timeView.setPName(name); 
+ timeView.setPValue(value); 
+}
+
+function getValue3(name)
+{
+  timeView.setPName(name); 
+  return timeView.PValue; 
+}
+
+function update3()
+{
+  var n = timeView.PName; 
+  var val = getValue3("val");
+  timeView.setPName(n);
+
+  timeView.pointer.resetTransform();
+  angle = val;
+  timeView.pointer.rotate(angle);
+  timeView.pointer.translate(-209,-209);
+}
+
+
+function init()
+{ 
+  timeView.addItem("widget"); 
+  timeView.addItem("pointer"); 
+  timeView.addItem("glass"); 
+  timeView.loadSvgFile("../resources/timer.svg");
+  timeView.glass.setPos(12,16);
+  timeView.pointer.setPos(348,344);
+  timeView.sceneRect = timeView.widget.boundingRect;
+  
+  //setValue3("min",0.0); 
+  //setValue3("max",100.0); 
+  setValue3("val",0.0); 
+  timeView["evaluate()"].connect(update3);
+
+  update3();
+}
+
+
+init();
+
+ 
+ 

@@ -1,0 +1,163 @@
+//Jacek Kosek (c)16.11.2008-17.11.2008
+
+//----------------------------------------------------------
+//Funkcja inicjalizujaca
+function init()
+{ 
+  //dodaje elementy ktore sa w pliku SVG
+  humanView.addItem("body");
+  //humanView.addItem("body2");
+  humanView.addItem("shoulder_r");
+  humanView.addItem("hip_r");
+  humanView.addItem("knee_r");
+  humanView.addItem("ankle_r");
+  humanView.addItem("elbow_r");
+  humanView.addItem("wirst_r");
+
+  humanView.addItem("small");
+  humanView.addItem("medium");
+  humanView.addItem("large");
+
+  //laduje plik SVG
+  humanView.loadSvgFile("../resources/body.svg");
+  //przycinam wzgledem tla
+  humanView.sceneRect = humanView.body.boundingRect;
+  //musze ustawic w odpowiednie miejsce
+  humanView.shoulder_r.translate(145+21,108+9);
+  humanView.hip_r.translate(117+21,246+9);
+  humanView.knee_r.translate(117.2+21,392+9);
+  humanView.ankle_r.translate(135.2+21,519+9);
+  humanView.elbow_r.translate(163.2+21,198+9);
+  humanView.wirst_r.translate(181.2+21,269+9);
+
+  humanView.small.translate(342,29);
+  humanView.medium.translate(324,185);
+  humanView.large.translate(302,393);
+
+
+
+  //inicjalizuje i ustawiam wartosci
+  setHuman("part",1);   //ktora czesc
+  setHuman("size",1);   //ktory rozmiar
+
+  //to musi byc (utworzenie polaczen)
+  humanView["evaluate()"].connect(updateHuman);
+  updateHuman();
+}
+
+//----------------------------------------------------------
+//Funkcja ktora jest wywolywana gdy przyjdzie sygnal
+//zmiany nastaw
+function updateHuman()
+{
+  //odczytanie wartosci
+  var n = humanView.PName;
+
+  //utworzenie dwuch przydatnych zmiennnych
+  var part = getHuman("part");
+  var size = getHuman("size");
+
+  //zapisanie wartosci
+  humanView.setPName(n);
+
+
+  //przelaczanie wyswietlania grzalek
+  switch (part){
+    case 1:
+      humanView.shoulder_r.show();
+      humanView.hip_r.hide();
+      humanView.knee_r.hide();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.hide();
+    break;
+    case 2:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.hide();
+      humanView.knee_r.hide();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.show();
+      humanView.wirst_r.hide();
+    break;
+    case 3:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.hide();
+      humanView.knee_r.hide();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.show();
+    break;
+    case 4:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.show();
+      humanView.knee_r.hide();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.hide();
+    break;
+    case 5:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.hide();
+      humanView.knee_r.show();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.hide();
+    break;
+    case 6:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.hide();
+      humanView.knee_r.hide();
+      humanView.ankle_r.show();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.hide();
+    break;
+    default:
+      humanView.shoulder_r.hide();
+      humanView.hip_r.hide();
+      humanView.knee_r.hide();
+      humanView.ankle_r.hide();
+      humanView.elbow_r.hide();
+      humanView.wirst_r.hide();
+    break;
+  }
+  switch (size){
+    case 1:
+      humanView.small.show();
+      humanView.medium.hide();
+      humanView.large.hide();
+    break;
+    case 2:
+      humanView.small.hide();
+      humanView.medium.show();
+      humanView.large.hide();
+    break;
+    case 3:
+      humanView.small.hide();
+      humanView.medium.hide();
+      humanView.large.show();
+    break;
+    default:
+      humanView.small.hide();
+      humanView.medium.hide();
+      humanView.large.hide();
+    break;
+  };
+
+}
+
+//==============================================================
+//--------------------------------------------------------------
+//to musi byc
+init();
+
+function setHuman(name, value) 
+{
+ humanView.setPName(name); 
+ humanView.setPValue(value); 
+}
+
+function getHuman(name)
+{
+  humanView.setPName(name); 
+  return humanView.PValue; 
+}

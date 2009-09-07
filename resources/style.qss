@@ -1,0 +1,201 @@
+QMainWindow
+{
+	background-color: none;
+	background-image: url(../resources/background.png);
+}
+
+QMessageBox
+{
+	background-color: rgba(0,0,0,200);
+	border-radius: 10;
+	/*background-image: url(../resources/background.png);*/
+}
+
+QAbstractButton
+{
+	background-color: rgba(255,255,255,100);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+	selection-background-color: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+QLabel
+{
+	color: yellow;
+	border-radius: 3;
+	/*padding-right: 2px;
+	padding-left: 2px;*/
+	background-color:  rgba(0,0,0,100);	
+}
+
+QLabel#backLabel
+{
+	color: black;
+	background-color:  rgba(255,255,255,100);
+	padding-right: 5px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 0;
+	border-bottom-left-radius: 20;
+	border-width: 3;
+	border-right: 0;
+	border-top: 0;
+}
+
+QLabel#selectLabel
+{
+	color: black;
+	background-color:  rgba(255,255,255,100);
+	padding-right: 5px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 0;
+	border-top-left-radius: 20;
+	border-width: 3;
+	border-right: 0;
+	border-bottom: 0;
+}
+
+
+QAbstractSpinBox
+{
+	background-color: rgba(255,255,255,100);
+	padding-left: 1px;
+	padding-right: 1px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+}
+
+QAbstractSpinBox:focus 
+{
+	border-color: yellow;
+	color: black;
+}
+
+QAbstractSpinBox::up-button
+{
+	subcontrol-origin: padding;
+	subcontrol-position: right; /* position at the top right corner */
+	width: 20px;
+	height: 20px;
+	border-width: 3px;
+}
+
+QAbstractSpinBox::up-arrow {
+	image: url(../resources/add.png);
+	width: 16px;
+	height: 16px;
+}
+
+
+QAbstractSpinBox::down-button 
+{
+	subcontrol-origin: border;
+	subcontrol-position: left;
+	width: 20px;
+	height: 20px;
+	border-width: 3px;
+}
+
+QAbstractSpinBox::down-arrow {
+	image: url(../resources/remove.png);
+	width: 16px;
+	height: 16px;
+}
+
+QAbstractScrollArea{
+/*QAbstractItemView {*/
+	background-color: transparent;
+	font-size: 16px;
+	show-decoration-selected: 1;
+	selection-color: black;
+	selection-background-color: none;
+}
+
+QTextBrowser{
+	color: white;
+	font-size: 11px;
+}
+
+QAbstractItemView::item {
+	margin-top: 10px;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	background-color: rgba(255,255,255,100);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+	selection-background-color: none;
+	
+	
+}
+
+QAbstractItemView::item:focus 
+{
+	border-color: yellow;
+	color: black;
+	selection-background-color: none;
+}
+
+QScrollBar:vertical {
+	background-color: rgba(255,255,255,100);
+	padding-left: 1px;
+	padding-right: 1px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+	width: 25px;
+	margin: 27px 0 27px 0;
+}
+QScrollBar::handle:vertical {
+    background: rgba(255,255,255,100);
+    min-height: 20px;
+}
+QScrollBar::add-line:vertical {
+ 	background-color: rgba(255,255,255,100);
+	padding-left: 1px;
+	padding-right: 1px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+	background-color: rgba(255,255,255,100);
+	padding-left: 1px;
+	padding-right: 1px;
+	border-color: darkkhaki;
+	border-style: solid;
+	border-radius: 5;
+	border-width: 3;
+    height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+} 

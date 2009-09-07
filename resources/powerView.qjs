@@ -1,0 +1,56 @@
+function setPowerValue(name, value) 
+{
+ powerView.setPName(name); 
+ powerView.setPValue(value); 
+}
+
+function getPowerValue(name)
+{
+  powerView.setPName(name); 
+  return powerView.PValue; 
+}
+
+function updatePower()
+{
+  var n = powerView.PName; 
+  //var max = getPowerValue("max");
+  //var min = getPowerValue("min");
+  var val = getPowerValue("val");
+  powerView.setPName(n);
+
+  var angle = (val*1.8)-90 ;
+  //print("Max:" + max + " Min:" + min + " Val:" + val + " Angle:" + angle);
+  powerView.pointer.resetTransform();
+  //if (angle > 100 ) 
+  //   angle = 100; 
+  //if (angle < 0 ) 
+  //   angle = 0; 
+
+  powerView.pointer.rotate(angle);
+  powerView.pointer.translate(-9,-76);
+}
+
+
+function init()
+{ 
+  powerView.addItem("widget"); 
+  powerView.addItem("pointer"); 
+  //powerView.addItem("glass"); 
+  powerView.loadSvgFile("../resources/power.svg");
+  //powerView.glass.setPos(9.365,9.365);
+  powerView.pointer.setPos(122.0,120.0);
+  powerView.sceneRect = powerView.widget.boundingRect;
+  
+  //setPowerValue("min",0.0); 
+  //setPowerValue("max",100.0); 
+  setPowerValue("val",0.0); 
+  powerView["evaluate()"].connect(updatePower);
+
+  updatePower();
+}
+
+
+init();
+
+ 
+ 

@@ -1,0 +1,88 @@
+//Jacek Kosek (c)16.11.2008-17.11.2008
+
+//----------------------------------------------------------
+//Funkcja inicjalizujaca
+function init()
+{ 
+  //dodaje elementy ktore sa w pliku SVG
+  levelView2.addItem("widget");   //butla (tlo)
+  levelView2.addItem("pointer");  //prostokat symb. azot
+  levelView2.addItem("heatera");  //grzalka niebieska
+  levelView2.addItem("heaterb");  //grzalka czerwona
+
+  //laduje plik SVG
+  levelView2.loadSvgFile("../resources/level.svg");
+  //przycinam wzgledem tla
+  levelView2.sceneRect = levelView2.widget.boundingRect;
+  //musze ustawic w odpowiednie miejsce
+  //prostokont z azotem
+  levelView2.pointer.setPos(40.0, 432.0);
+  levelView2.heatera.setPos(120.0, 50.0);
+  levelView2.heaterb.setPos(120.0, 50.0);
+
+
+  //inicjalizuje i ustawiam wartosci
+  setValue4("heat",0);   //ktora grzalka
+  setValue4("value",0.0);  //wysokosc zaotu
+
+  //to musi byc (utworzenie polaczen)
+  levelView2["evaluate()"].connect(update2);
+  update2();
+}
+
+//----------------------------------------------------------
+//Funkcja ktora jest wywolywana gdy przyjdzie sygnal
+//zmiany nastaw
+function update2()
+{
+  //odczytanie wartosci
+  var n = levelView2.PName;
+
+  //utworzenie dwuch przydatnych zmiennnych
+  var val = getValue4("value");
+  var heat = getValue4("heat");
+
+  //zapisanie wartosci
+  levelView2.setPName(n);
+
+  //ograniczenia na poziom 0 < val < 100
+  if (val > 100)
+    val = 100;
+  if (val < 0.0)
+    val = 0;
+
+  //przelaczanie wyswietlania grzalek
+  if (heat == 0){
+    levelView2.heaterb.hide();
+    levelView2.heatera.show();
+  } else {
+    levelView2.heatera.hide();
+    levelView2.heaterb.show();
+  }
+
+  //zmienna wyskalowania wysokosci
+  var yscale = 100;
+
+  //kasowanie poprzedniej transformacji
+  levelView2.pointer.resetTransform();
+  //levelView2.pointer.translate(0,bottom);
+  //skalowanie pozoimu azotu
+  levelView2.pointer.scale(1,-1/yscale*val);
+}
+
+//==============================================================
+//--------------------------------------------------------------
+//to musi byc
+init();
+
+function setValue4(name, value) 
+{
+ levelView2.setPName(name); 
+ levelView2.setPValue(value); 
+}
+
+function getValue4(name)
+{
+  levelView2.setPName(name); 
+  return levelView2.PValue; 
+}

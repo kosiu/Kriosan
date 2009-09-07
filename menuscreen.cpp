@@ -19,6 +19,7 @@
 #include <QPushButton>
 #include <QProcess>
 #include <QTime>
+#include <QDate>
 
 #include "menuscreen.h"
 #include "infoscreen.h"
@@ -27,7 +28,6 @@
 #include "sensorscreen.h"
 #include "buzzer.h"
 #include "adcdevice.h"
-#include "realtimeclock.h"
 
 MenuScreen::MenuScreen(QTranslator* trans, ADCDevice* adc_readArg, Buzzer* buzzerArg,
 			 bool serviceKeyArg, QWidget * parent, Qt::WFlags f)
@@ -97,8 +97,8 @@ void MenuScreen::doMainView()
 		show();
 
 		//computing inspetion date
-		RealTimeClock rtc;
-		QDate actualDate = rtc.get().date();
+		QDate actualDate;
+		actualDate = QDate::currentDate();
 		QDate inspectionDate = system->value("inspection",QDate(2000,1,1)).toDate();
 		int daysLeft = actualDate.daysTo(inspectionDate);
 

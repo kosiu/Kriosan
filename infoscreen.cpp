@@ -16,6 +16,7 @@
 #include <QScrollBar>
 #include <QString>
 #include <QSettings>
+#include <QSlider>
 
 InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -47,6 +48,7 @@ InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
 		textBrowser->cut();
 		textBrowser->insertPlainText(QDate(2008,5,9).toString());
 	}
+	textBrowser->moveCursor(QTextCursor::Start);
 }
 
 void InfoScreen::keyPressEvent( QKeyEvent * event )

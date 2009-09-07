@@ -13,8 +13,8 @@
 #include <QSettings>
 #include <QProcess>
 #include <QApplication>
-#include "inspectionscreen.h"
 #include "realtimeclock.h"
+#include "inspectionscreen.h"
 
 InspectionScreen::InspectionScreen(QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -26,8 +26,8 @@ InspectionScreen::InspectionScreen(QWidget *parent, Qt::WFlags f)
 	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
 	inspectionDateEdit->setDate(system->value("inspection",QDate(2000,1,1)).toDate());
 	
-	RealTimeClock rtc;
-	dateTimeEdit->setDateTime(rtc.get());
+	QDateTime date = QDateTime::currentDateTime();
+	dateTimeEdit->setDateTime(date);
 
 	connect(qApp, SIGNAL(focusChanged(QWidget*, QWidget*)), SLOT(changeSelectName(QWidget*, QWidget*)));
 }

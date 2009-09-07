@@ -73,7 +73,6 @@ void MenuScreen::showMenuScreen(MenuScreenType menuType)
 		case mainView:      doMainView();      break;
 		case optionView:    doOptionView();    break;
 		case languageView:  doLanguageView();  break;
-		/*case operationView: doOperationView(); break;*/
 	}
 	show();
 }
@@ -82,10 +81,8 @@ void MenuScreen::doLabels()
 {
 	if (system->value("Exit", 1).toInt() == 0 && menuScreenType == mainView){
 		backLabel->hide();
-		//backLabel->setText(" ");
 	} else {
 		backLabel->show();
-		//backLabel->setText(trUtf8("Wyjście"));
 	}
 	selectLabel->setText(trUtf8("Wybierz"));
 	levelLabel->setText(trUtf8("Poziom azotu:"));	
@@ -171,17 +168,6 @@ void MenuScreen::doOptionView(){
 		menuItem = new QListWidgetItem(trUtf8("Kalibracja"), menuView);
 		menuItem->setIcon(QIcon("../resources/configure.png"));
 		menuItem->setTextAlignment(Qt::AlignHCenter);
-
-		/*
-		menuItem = new QListWidgetItem(trUtf8("Informacje serwisowe"), menuView);
-		menuItem->setIcon(QIcon("../resources/help.png"));
-		menuItem->setTextAlignment(Qt::AlignHCenter);
-		*/
-		/*
-		menuItem = new QListWidgetItem(trUtf8("Okno testowe"), menuView);
-		menuItem->setIcon(QIcon("../resources/configure.png"));
-		menuItem->setTextAlignment(Qt::AlignHCenter);
-		*/
 	}
 	menuView->setCurrentRow(0);
 }
@@ -206,38 +192,6 @@ void MenuScreen::doLanguageView(){
 	menuView->setCurrentRow(0);
 }
 
-/*void MenuScreen::doOperationView(){
-	menuView->clear();
-	doLabels();
-	menuNameLabel->setText(trUtf8("Zabieg:"));
-
-	menuItem = new QListWidgetItem(trUtf8("Bark"), menuView);
-	menuItem->setIcon(QIcon("../resources/continues.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-	
-	menuItem = new QListWidgetItem(trUtf8("Łokieć"), menuView);
-	menuItem->setIcon(QIcon("../resources/history.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-
-	menuItem = new QListWidgetItem(trUtf8("Nadgarstek"), menuView);
-	menuItem->setIcon(QIcon("../resources/configure.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-
-	menuItem = new QListWidgetItem(trUtf8("Biodro"), menuView);
-	menuItem->setIcon(QIcon("../resources/continues.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-	
-	menuItem = new QListWidgetItem(trUtf8("Kolano"), menuView);
-	menuItem->setIcon(QIcon("../resources/history.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-
-	menuItem = new QListWidgetItem(trUtf8("Kostka"), menuView);
-	menuItem->setIcon(QIcon("../resources/configure.png"));
-	menuItem->setTextAlignment(Qt::AlignHCenter);
-
-	menuView->setCurrentRow(0);
-}
-*/
 
 void MenuScreen::keyPressEvent( QKeyEvent * event )
 {
@@ -255,8 +209,6 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 				emit(SendShowMenuScreen(mainView)); break;
 			case languageView:
 				emit(SendShowMenuScreen(optionView)); break;
-			/*case operationView:
-				emit(SendShowMenuScreen(mainView)); break;*/
 		}
         }
 
@@ -274,7 +226,6 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 				lower(); clearFocus ();
 			    break;
 			    case 1:
-				/*emit(SendShowMenuScreen(operationView));*/
 				emit(SendShowSelectScreen());
 			    break;
 			    case 2:
@@ -307,16 +258,6 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 				sensorScreen = new SensorScreen(adc_read, buzzer);
 				sensorScreen->show();
 			    break;
-			    /*case 5:
-				//Inspection Information
-				infoScreen = new InfoScreen();
-				infoScreen->show();
-			    break;*/
-			    /*case 6:
-				//Test Window
-				selectScreen = new SelectScreen();
-				selectScreen->show();
-			    break;*/
 			};
 		    break;
 		    case languageView:
@@ -349,11 +290,7 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 			    sync.waitForFinished();
 
 			};
-		    break;/*
-		    case operationView:
-			emit(SendShowOperationScreen( menuIndex+1 ));
-			lower();clearFocus ();
-		    break;*/
+		    break;
 		}
 
 	}

@@ -46,7 +46,6 @@ private slots:
 	void startOperation();
 	void stopOperation();
 	void computeTime();
-	void saveSettings();
 
 private:
 	enum {start, stop} buttonState;

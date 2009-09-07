@@ -82,40 +82,6 @@ void OperationScreen::showOperationScreen(OperationScreenType operationType)
 	}
 	show();
 }
-void OperationScreen::saveSettings()
-{/*
-	switch (operationScreenType){
-	    case 0:
-		settings->setValue("operation power 0", powerEdit->value());
-	    break;
-	    case 1:
-		settings->setValue("operation time 1", timeEdit->time());
-		settings->setValue("operation power 1", powerEdit->value());
-	    break;
-	    case 2:
-		settings->setValue("operation time 2", timeEdit->time());
-		settings->setValue("operation power 2", powerEdit->value());
-	    break;
-	    case 3:
-		settings->setValue("operation time 3", timeEdit->time());
-		settings->setValue("operation power 3", powerEdit->value());
-	    break;
-	    case 4:
-		settings->setValue("operation time 4", timeEdit->time());
-		settings->setValue("operation power 4", powerEdit->value());
-	    break;
-	    case 5:
-		settings->setValue("operation time 5", timeEdit->time());
-		settings->setValue("operation power 5", powerEdit->value());
-	    break;
-	    case 6:
-		settings->setValue("operation time 6", timeEdit->time());
-		settings->setValue("operation power 6", powerEdit->value());
-	    break;
-	}
-	//TODO hide saveButton
-*/
-}
 
 void OperationScreen::doLabels()
 {
@@ -142,7 +108,6 @@ void OperationScreen::levelValue(int value)
 		float newValue = (lastValue1 + lastValue2 + value)/3;
 
 		levelEdit->setValue(newValue);
-		//qDebug("%d",value);
 		levelView->setPName("value");
 		levelView->setPValue(newValue);
 
@@ -165,7 +130,6 @@ void OperationScreen::powerValue(int value)
 	powerView->setPName("val");
 	powerView->setPValue(value);
 	heater->updatePower(powerEdit->value());
-	//TODO emit show saveButton
 }
 
 void OperationScreen::timeValue(QTime value)
@@ -174,7 +138,6 @@ void OperationScreen::timeValue(QTime value)
 	timeView->setPName("val");
 	timeView->setPValue(val/2);
 	if (buttonState == stop) {
-		//TODO emit show saveButton
 	}
 }
 
@@ -230,7 +193,6 @@ void OperationScreen::computeTime()
 {
 	QTime acctualTime;
 	QString str;
-	//buzzer->beep(5);<---------------------------------------buzzer
 	acctualTime = timeEdit->time();
 	if (operationScreenType == 0){
 		acctualTime = acctualTime.addSecs(1);
@@ -238,7 +200,6 @@ void OperationScreen::computeTime()
 		acctualTime = acctualTime.addSecs(-1);
 	}
 	timeEdit->setTime(acctualTime);
-	//buzzer->beep(10);
 	if (acctualTime <= QTime(0,0))
 		emit(stopOperation());
 }
@@ -286,18 +247,3 @@ void OperationScreen::keyPressEvent( QKeyEvent * event )
 	    }
 	}
 }
-
-
-
-//void OperationScreen::powerValue(int value)
-//{
-//	qDebug("wartosc do wysłania %d", value);
-//	levelView->setPName("value");
-//	qDebug("PName: %s", qPrintable(levelView->getPName()));
-//	qDebug("PValue: %s", qPrintable(levelView->getPValue().toString()));
-//
-//	levelView->setPValue(value);
-//
-//	qDebug("PName: %s", qPrintable(levelView->getPName()));
-//	qDebug("PValue: %s", qPrintable(levelView->getPValue().toString()));
-//}

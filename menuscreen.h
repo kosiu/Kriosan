@@ -53,7 +53,6 @@ private:
 	void doMainView();
 	void doOptionView();
 	void doLanguageView();
-	//void doOperationView();
 	void doLabels();
 	QSettings* settings;
 	QSettings* system;

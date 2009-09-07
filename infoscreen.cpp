@@ -15,6 +15,7 @@
 #include <QDate>
 #include <QScrollBar>
 #include <QString>
+#include <QSettings>
 
 InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -24,8 +25,23 @@ InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
 	setupUi(this);
 	backLabel->setText(QString(trUtf8("Wyjście")));
 	//QTextDocument infoText();
-	textBrowser->setSource(QUrl("../resources/publicinfo.html"));
-	titleBrowser->setSource(QUrl("../resources/kriosystem.html"));
+
+	QSettings settings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
+	QString language = settings.value("language", "pl").toString();
+
+	if (language == "en") {
+		textBrowser->setSource(QUrl("../resources/publicinfo_en.html"));
+		titleBrowser->setSource(QUrl("../resources/kriosystem_en.html"));
+	};
+	if (language == "de") {
+		textBrowser->setSource(QUrl("../resources/publicinfo_de.html"));
+		titleBrowser->setSource(QUrl("../resources/kriosystem_de.html"));
+	};
+	if (language == "pl") {
+		textBrowser->setSource(QUrl("../resources/publicinfo_pl.html"));
+		titleBrowser->setSource(QUrl("../resources/kriosystem_pl.html"));	
+	};
+
 
 	if(textBrowser->find("$DATE$")){
 		textBrowser->cut();

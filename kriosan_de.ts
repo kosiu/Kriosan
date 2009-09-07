@@ -4,7 +4,7 @@
 <context encoding="UTF-8">
     <name>InfoScreen</name>
     <message encoding="UTF-8">
-        <location filename="infoscreen.cpp" line="25"/>
+        <location filename="infoscreen.cpp" line="26"/>
         <source>Wyjście</source>
         <translation>Ausgang</translation>
     </message>
@@ -25,92 +25,92 @@
 <context>
     <name>MenuScreen</name>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="118"/>
+        <location filename="menuscreen.cpp" line="121"/>
         <source>Wyjście</source>
         <translation>Ausgang</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="88"/>
+        <location filename="menuscreen.cpp" line="90"/>
         <source>Wybierz</source>
         <translation>Auswähl</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="89"/>
+        <location filename="menuscreen.cpp" line="91"/>
         <source>Poziom azotu:</source>
         <translation>Niveau des Stickstoffes:</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="110"/>
+        <location filename="menuscreen.cpp" line="113"/>
         <source>Upłynęło %1 dni od planowanego przeglądu</source>
         <translation>Die %1 Tage sind gegen dem geplanten Durchsehen vergangen</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="113"/>
+        <location filename="menuscreen.cpp" line="116"/>
         <source>Do przeglądu pozostało %1 dni</source>
         <translation>Bis zu dem Durchsehen sind die %1 Tage übriggeblieben</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="125"/>
+        <location filename="menuscreen.cpp" line="131"/>
         <source>Menu Startowe</source>
         <translation>Start Menü</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="127"/>
+        <location filename="menuscreen.cpp" line="133"/>
         <source>Praca ciągła</source>
         <translation>Ständige Arbeit</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="131"/>
+        <location filename="menuscreen.cpp" line="137"/>
         <source>Zabieg zdefiniowany</source>
         <translation>Behandlung definierte </translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="145"/>
+        <location filename="menuscreen.cpp" line="151"/>
         <source>Opcje</source>
         <translation>Optionen</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="147"/>
+        <location filename="menuscreen.cpp" line="153"/>
         <source>Wybór języka</source>
         <translation>Wahl der Zunge</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="151"/>
+        <location filename="menuscreen.cpp" line="157"/>
         <source>Przywracanie ustawień</source>
         <translation>Wiederherstellen des Stellens</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="155"/>
+        <location filename="menuscreen.cpp" line="161"/>
         <source>Informacje</source>
         <translation>Informationen</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="161"/>
+        <location filename="menuscreen.cpp" line="167"/>
         <source>Termin przeglądu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="165"/>
+        <location filename="menuscreen.cpp" line="171"/>
         <source>Kalibracja</source>
         <translation type="unfinished"></translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="menuscreen.cpp" line="186"/>
+        <location filename="menuscreen.cpp" line="192"/>
         <source>Język</source>
         <translation>Zunge</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="188"/>
+        <location filename="menuscreen.cpp" line="194"/>
         <source>Polski</source>
         <translation>Polnisch</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="192"/>
+        <location filename="menuscreen.cpp" line="198"/>
         <source>Angielski</source>
         <translation>Englisch</translation>
     </message>
     <message>
-        <location filename="menuscreen.cpp" line="196"/>
+        <location filename="menuscreen.cpp" line="202"/>
         <source>Niemiecki</source>
         <translation>Deutsche</translation>
     </message>
@@ -118,74 +118,79 @@
 <context>
     <name>OperationScreen</name>
     <message encoding="UTF-8">
-        <location filename="operationscreen.cpp" line="59"/>
+        <location filename="operationscreen.cpp" line="61"/>
         <source>Praca ciągła</source>
         <translation>Ständige Arbeit</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="63"/>
+        <location filename="operationscreen.cpp" line="65"/>
         <source>Bark</source>
         <translation>Schulter</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="operationscreen.cpp" line="66"/>
+        <location filename="operationscreen.cpp" line="68"/>
         <source>Łokieć</source>
         <translation>Ellenbogen</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="69"/>
+        <location filename="operationscreen.cpp" line="71"/>
         <source>Nadgarstek</source>
         <translation>Handwurzel</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="72"/>
+        <location filename="operationscreen.cpp" line="74"/>
         <source>Biodro</source>
         <translation>Hüfte</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="75"/>
+        <location filename="operationscreen.cpp" line="77"/>
         <source>Kolano</source>
         <translation>Knie</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="78"/>
+        <location filename="operationscreen.cpp" line="80"/>
         <source>Kostka</source>
         <translation>Knöchelchen</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="operationscreen.cpp" line="120"/>
+        <location filename="operationscreen.cpp" line="257"/>
         <source>Wyjście</source>
         <translation>Ausgang</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="200"/>
+        <location filename="operationscreen.cpp" line="217"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="204"/>
+        <location filename="operationscreen.cpp" line="221"/>
         <source>Czas zabiegu:</source>
         <translation>Zeit der Behandlun:</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="operationscreen.cpp" line="123"/>
+        <location filename="operationscreen.cpp" line="125"/>
         <source>Intensywność:</source>
         <translation>Intensität:</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="124"/>
+        <location filename="operationscreen.cpp" line="126"/>
         <source>Poziom azotu:</source>
         <translation>Niveau des Stickstoffes:</translation>
     </message>
     <message>
-        <location filename="operationscreen.cpp" line="177"/>
+        <location filename="operationscreen.cpp" line="189"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message encoding="UTF-8">
-        <location filename="operationscreen.cpp" line="185"/>
+        <location filename="operationscreen.cpp" line="197"/>
         <source>Pozostały czas:</source>
         <translation>Geblieben Zeit:</translation>
+    </message>
+    <message encoding="UTF-8">
+        <location filename="operationscreen.cpp" line="255"/>
+        <source>Za mało azotu</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -196,9 +201,14 @@
         <translation>Ausgang</translation>
     </message>
     <message>
-        <location filename="selectscreen.cpp" line="65"/>
+        <location filename="selectscreen.cpp" line="66"/>
         <source>Inten.: %1%, czas: %2</source>
         <translation>Inten.: %1%, zeit: %2</translation>
+    </message>
+    <message>
+        <location filename="selectscreen.cpp" line="58"/>
+        <source>Wybierz</source>
+        <translation>Auswähl</translation>
     </message>
 </context>
 <context>
@@ -257,7 +267,7 @@
     <message encoding="UTF-8">
         <location filename="inspectionscreen.ui" line="94"/>
         <source>Wyjście</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ausgang</translation>
     </message>
     <message>
         <location filename="inspectionscreen.ui" line="116"/>
@@ -409,7 +419,7 @@
     <message encoding="UTF-8">
         <location filename="sensorsscreen.ui" line="81"/>
         <source>Wyjście</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ausgang</translation>
     </message>
     <message>
         <location filename="sensorsscreen.ui" line="121"/>

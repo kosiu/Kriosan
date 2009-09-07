@@ -55,6 +55,7 @@ void SelectScreen::updateStatus(){
 	int operationNumer = (part - 1) * 3 + size;
 
 	backLabel->setText(QString(trUtf8("Wyjście")));
+	selectLabel->setText(QString(trUtf8("Wybierz")));
 	QString powerStr=QString("operation_power_%1").arg(operationNumer);
 	QString timeStr =QString("operation_time_%1" ).arg(operationNumer);
 

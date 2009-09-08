@@ -14,20 +14,21 @@
 #include <QString>
 #include <QSettings>
 #include "sensorscreen.h"
+#include "filter.h"
 #include "adcdevice.h"
 
-
-SensorScreen::SensorScreen(ADCDevice* adc_readArg, Buzzer* buzzer,QWidget *parent, Qt::WFlags f)
+SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
-	adc_read=adc_readArg;
+	filter=filterArg;
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
 
 	setupUi(this);
-	adc_read->startConversions(3 , 200);
-	connect(adc_read, SIGNAL(channel3(int)), this, SLOT(levelVoltage(int)));
-	connect(adc_read, SIGNAL(channel2(int)), this, SLOT(temperatureVoltage(int)));
-	connect(adc_read, SIGNAL(channel1(int)), this, SLOT(keyVoltage(int)));
+	filter->adc_read.startConversions(3 , 200);
+	connect(filter, SIGNAL(levelValue(float)), this, SLOT(levelVoltage(float)));
+	connect(filter, SIGNAL(tempValue(float)), this, SLOT(temperatureVoltage(float)));
+	connect(filter, SIGNAL(keyValue(float)), this, SLOT(keyVoltage(float)));
+	connect(&(filter->adc_read), SIGNAL(channel3(int)), this, SLOT(levelPure(int)));
 
 	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
 
@@ -41,33 +42,27 @@ SensorScreen::SensorScreen(ADCDevice* adc_readArg, Buzzer* buzzer,QWidget *paren
 
 }
 
-void SensorScreen::levelVoltage(int value)
+void SensorScreen::levelPure(int value)
 {
-	value = (value / 16); //in mV	
-	QString text = QString(trUtf8(" Poziomu azotu (napięcie): %1V")).arg(value/1e3,0,'G',3);
+	QString text = QString(trUtf8(" Poziomu azotu (napięcie): %1V")).arg(value/16e3,0,'G',3);
 	levelVoltageLabel->setText(text);
+}
 
-	int min = emptyBottleEdit->value() * 1000.0;
-	int max =  fullBottleEdit->value() * 1000.0;
-	value = (100 * (value - min)) / (max - min);
-	if (value>100) value = 100; if (value<0) value = 0;
-	text = QString(trUtf8(" Poziom azotu: %1% ")).arg(value);
+
+void SensorScreen::levelVoltage(float value)
+{
+	QString text = QString(trUtf8(" Poziom azotu: %1% ")).arg(value);
 	levellabel->setText(text);
 }
 
-void SensorScreen::temperatureVoltage(int voltage)
+void SensorScreen::temperatureVoltage(float temp)
 {
-	//float temp = 2341.2 * voltage / 16000.0 / (14.19 - voltage/16000.0) - 29.5808;
-	//celc = 2.3412 * R - 243.4192
-	float temp = 0.01067 * voltage + 34.0886;
 	QString text = QString(trUtf8(" Termometr: %1K")).arg(temp,0,'G',3);
 	temperatureLabel->setText(text);
 }
 
-void SensorScreen::keyVoltage(int value)
-{
-	float voltage = (value /16) / 1000.0;
-	
+void SensorScreen::keyVoltage(float voltage)
+{	
 	QString text = QString(trUtf8(" Klucz serwisowy: %1V")).arg(voltage,0,'G',3);
 	serviceKeyLabel->setText(text);
 }
@@ -76,7 +71,7 @@ void SensorScreen::keyPressEvent( QKeyEvent * event )
 {
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
-		adc_read->startConversions(2 , 250);
+		filter->adc_read.startConversions(2 , 250);
 		close();
         }
 	//SELECT SWITCH
@@ -95,4 +90,3 @@ void SensorScreen::keyPressEvent( QKeyEvent * event )
 	}
 }
 
-	

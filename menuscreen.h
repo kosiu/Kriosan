@@ -21,7 +21,7 @@ class InspectionScreen;
 class SelectScreen;
 class SensorScreen;
 class QSettings;
-class ADCDevice;
+class Filter;
 class Buzzer;
 class QTime;
 
@@ -31,12 +31,12 @@ class MenuScreen: public QMainWindow, public Ui::menuScreen
 Q_OBJECT
 
 public:
-	MenuScreen(QTranslator* trans, ADCDevice* adc_read, Buzzer* buzzer,
+	MenuScreen(QTranslator* trans, Filter* filter, Buzzer* buzzer,
 			 bool serviceKey, QWidget * parent = 0, Qt::WFlags f = 0);
 
 public slots:
 	void showMenuScreen(MenuScreenType menuScreenType);
-	void levelValue(int value);
+	void levelValue(float value);
 
 signals:
 	void SendShowOperationScreen(OperationScreenType operationScreenType);
@@ -58,7 +58,7 @@ private:
 	QSettings* system;
 	QTranslator* translator;
 	bool noShowed;
-	ADCDevice* adc_read;
+	Filter* filter;
 	Buzzer* buzzer;
 	bool serviceKey;
 

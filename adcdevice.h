@@ -15,7 +15,8 @@
 class I2CDevice;
 class QTimer;
 
-class ADCDevice : public QObject{
+class ADCDevice : public QObject
+{
     Q_OBJECT
 
     public:

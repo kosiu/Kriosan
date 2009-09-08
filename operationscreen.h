@@ -19,7 +19,7 @@ class QTime;
 class QEvent;
 class QSettings;
 class QMainWindow;
-class ADCDevice;
+class Filter;
 class Buzzer;
 class Heater;
 
@@ -28,12 +28,12 @@ class OperationScreen : public QMainWindow, public Ui::operationScreen
 Q_OBJECT
 
 public:
-	OperationScreen( ADCDevice*, Buzzer*, QWidget * parent = 0, Qt::WFlags f = 0 );
+	OperationScreen( Filter*, Buzzer*, QWidget * parent = 0, Qt::WFlags f = 0 );
 
 public slots:
-	void levelValue(int value);
+	void levelValue(float value);
 	void showOperationScreen(OperationScreenType);
-	void overheat(int adc_read);
+	void overheat(float temperature);
 
 signals:
 	void SendShowMenuScreen(MenuScreenType menuScreenType);

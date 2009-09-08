@@ -12,19 +12,19 @@
 #ifndef FILTER_H
 #define FILTER_H
 
-#include <QThread>
-#include <QMutex>
-#include <QWaitCondition>
+#include <QObject>
+class ADCDevice;
 
 /**
 This class recive signals from adc converter, then convert for more interesting signals, filter them and send futher.
 */
-class Filter : public QThread
+class Filter : public QObject
 {
 Q_OBJECT
 public:
     Filter(QObject *parent =0);
     ~Filter();
+    static ADCDevice adc_read;
 
 public slots:
     void channel1(int value);
@@ -34,18 +34,7 @@ public slots:
 signals:
     void keyValue(float voltage);
     void levelValue(float level);
-    void temperatureValue(float temperature);
-
-private:
-	QWaitCondition cond;
-	QMutex mutex;
-	bool quit;
-	int val; //value of signal recivied
-	int channel; //wich channel
-
-protected:
-     void run();
-
+    void tempValue(float temp);
 };
 
 #endif

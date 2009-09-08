@@ -18,10 +18,10 @@
 #include "operationscreen.h"
 #include "scriptwidget.h"
 #include "buzzer.h"
-#include "adcdevice.h"
+#include "filter.h"
 #include "heater.h"
 
-OperationScreen::OperationScreen( ADCDevice*, Buzzer* buzz, QWidget * parent, Qt::WFlags f) 
+OperationScreen::OperationScreen( Filter*, Buzzer* buzz, QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
 {
 	buzzer = buzz;
@@ -92,28 +92,12 @@ void OperationScreen::doLabels()
 	levelLabel->setText(trUtf8("Poziom azotu:"));
 }
 
-void OperationScreen::levelValue(int value)
+void OperationScreen::levelValue(float value)
 {
 	if(isActiveWindow()){
-		value = (value /16);
-		int min =  system->value("Bottle_Min", 0.00).toDouble() * 1000.0;
-		int max =  system->value("Bottle_Max", 2.04).toDouble() * 1000.0;
-		value = (100 * (value - min)) / (max - min);
-		if (value>100) value = 100; if (value<0) value = 0;
-
-		static float lastValue1 = value;
-		static float lastValue2 = value;
-		static float mediumValue = value;
-
-		float newValue = (lastValue1 + lastValue2 + value)/3;
-
-		levelEdit->setValue(newValue);
+		levelEdit->setValue(value);
 		levelView->setPName("value");
-		levelView->setPValue(newValue);
-
-		mediumValue = newValue;
-		lastValue2 = lastValue1;
-		lastValue1 = value;
+		levelView->setPValue(value);
 	}
 }
 
@@ -204,12 +188,10 @@ void OperationScreen::computeTime()
 		emit(stopOperation());
 }
 
-void OperationScreen::overheat(int voltage)
+void OperationScreen::overheat(float tempArg)
 {
+	temp = tempArg;
 	if(isActiveWindow()){
-		//celc = 2.3412 * R - 243.4192
-		// R = 1000 * U / (14.19 - U)
-		temp = 0.01067 * voltage + 34.0886;
 		if(buttonState==stop){
 			if (temp>=system->value("Temperature",77).toDouble()){
 				emit(stopOperation());

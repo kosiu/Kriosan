@@ -14,7 +14,7 @@
 
 #include "ui_sensorsscreen.h"
 class QMainWindow;
-class ADCDevice;
+class Filter;
 class Buzzer;
 class QSettings;
 
@@ -23,17 +23,19 @@ class SensorScreen: public QMainWindow, public Ui::sensorScreen
 Q_OBJECT
 
 public:
-	SensorScreen(ADCDevice* adc_read, Buzzer* buzzer,QWidget * parent = 0, Qt::WFlags f = 0);
+	SensorScreen(Filter* filter, Buzzer* buzzer,QWidget * parent = 0, Qt::WFlags f = 0);
 
 protected:
 	void keyPressEvent( QKeyEvent * event );
 
 private slots:
-	void levelVoltage(int);
-	void temperatureVoltage(int);
-	void keyVoltage(int);
+	void levelVoltage(float);
+	void temperatureVoltage(float);
+	void keyVoltage(float);
+        void levelPure(int value);
+
 private:
-	ADCDevice* adc_read;
+	Filter* filter;
 	QSettings* system;
 };
 

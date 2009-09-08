@@ -27,14 +27,14 @@
 #include "selectscreen.h"
 #include "sensorscreen.h"
 #include "buzzer.h"
-#include "adcdevice.h"
+#include "filter.h"
 
-MenuScreen::MenuScreen(QTranslator* trans, ADCDevice* adc_readArg, Buzzer* buzzerArg,
+MenuScreen::MenuScreen(QTranslator* trans, Filter* filterArg, Buzzer* buzzerArg,
 			 bool serviceKeyArg, QWidget * parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
 	buzzer=buzzerArg;
-	adc_read=adc_readArg;
+	filter=filterArg;
 	serviceKey = serviceKeyArg;
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
 	
@@ -51,15 +51,9 @@ MenuScreen::MenuScreen(QTranslator* trans, ADCDevice* adc_readArg, Buzzer* buzze
 	doMainView();
 }
 
-void MenuScreen::levelValue(int value)
+void MenuScreen::levelValue(float value)
 {
 	if(isActiveWindow()){
-		value = (value /16);
-		int min =  system->value("Bottle_Min", 0.00).toDouble() * 1000.0;
-		int max =  system->value("Bottle_Max", 2.04).toDouble() * 1000.0;
-		value = (100 * (value - min)) / (max - min);
-		if (value>100) value = 100; if (value<0) value = 0;
-
 		levelEdit->setValue(value);
 		levelView2->setPName("value");
 		levelView2->setPValue(value);
@@ -255,7 +249,7 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 			    break;
 			    case 4:
 				//Calibration
-				sensorScreen = new SensorScreen(adc_read, buzzer);
+				sensorScreen = new SensorScreen(filter, buzzer);
 				sensorScreen->show();
 			    break;
 			};

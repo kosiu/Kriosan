@@ -22,6 +22,7 @@
 #include "adcdevice.h"
 #include "buzzer.h"
 #include "selectscreen.h"
+#include "filter.h"
 
 #ifdef __arm__
 #include <QKbdDriverFactory>
@@ -69,10 +70,10 @@ int main(int argc, char ** argv)
     	qApp->setStyleSheet(styleSheet.readAll());
 
 	//checking if inspection key is pluged
-	ADCDevice* adc_read;
-	adc_read = new ADCDevice();
+	Filter* filter;
+	filter = new Filter();
 	bool serviceKey=false;
-	int value = adc_read->singleConversion(1);
+	int value = filter->adc_read.singleConversion(1);
 	float min = system.value("Key_Min", 0.4).toDouble();
 	float max = system.value("Key_Max", 2.04).toDouble();
 	float voltage = (value /16) / 1000.0;
@@ -84,12 +85,12 @@ int main(int argc, char ** argv)
 	Buzzer* buzzer;
 	buzzer = new Buzzer();
 
-	adc_read->startConversions(2 , 250);
+	filter->adc_read.startConversions(2 , 250);
 
 	//Windows initialisation
-	OperationScreen operationScreen(adc_read, buzzer);
+	OperationScreen operationScreen(filter, buzzer);
 	SelectScreen* selectScreen = new SelectScreen();
-	MenuScreen* menuScreen = new MenuScreen(&translator, adc_read, buzzer, serviceKey);
+	MenuScreen* menuScreen = new MenuScreen(&translator, filter, buzzer, serviceKey);
 	//some IFDEF should be
 	menuScreen->setGeometry(0,0,240,320);
 	operationScreen.setGeometry(0,0,240,320);
@@ -97,9 +98,9 @@ int main(int argc, char ** argv)
 
 
 	//making signals connections
-	app.connect(adc_read, SIGNAL(channel3(int)), &operationScreen, SLOT(levelValue(int)));
-	app.connect(adc_read, SIGNAL(channel3(int)), menuScreen, SLOT(levelValue(int)));
-	app.connect(adc_read, SIGNAL(channel2(int)), &operationScreen, SLOT(overheat(int)));
+	app.connect(filter, SIGNAL(levelValue(float)), &operationScreen, SLOT(levelValue(float)));
+	app.connect(filter, SIGNAL(levelValue(float)), menuScreen, SLOT(levelValue(float)));
+	app.connect(filter, SIGNAL(tempValue(float)), &operationScreen, SLOT(overheat(float)));
 
 
 	//menu -> operation (continues operation)

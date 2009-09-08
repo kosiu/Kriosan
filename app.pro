@@ -22,7 +22,8 @@ SOURCES += main.cpp \
  realtimeclock.cpp \
  heater.cpp \
  i2cdevice.cpp \
- adcdevice.cpp
+ adcdevice.cpp \
+ filter.cpp
 TEMPLATE = app
 CONFIG += warn_on \
     thread \
@@ -45,7 +46,8 @@ HEADERS += operationscreen.h \
  realtimeclock.h \
  heater.h \
  i2cdevice.h \
- adcdevice.h
+ adcdevice.h \
+ filter.h
 FORMS += operationscreen.ui \
     menuscreen.ui \
     infoscreen.ui \

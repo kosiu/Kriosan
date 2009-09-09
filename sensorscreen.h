@@ -29,10 +29,9 @@ protected:
 	void keyPressEvent( QKeyEvent * event );
 
 private slots:
-	void levelVoltage(float);
+	void levelVoltage(int);
 	void temperatureVoltage(float);
 	void keyVoltage(float);
-        void levelPure(int value);
 
 private:
 	Filter* filter;

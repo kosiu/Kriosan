@@ -12,7 +12,7 @@
 #include "filter.h"
 #include "adcdevice.h"
 #include <QSettings>
-
+#include "QtDebug"
 
 Filter::Filter(QObject *parent) : QObject(parent)
 {
@@ -41,6 +41,13 @@ void Filter::channel2(int value)
 	// R = 1000 * U / (14.19 - U)
 	float temp;
 	temp = 0.01067 * (float)value + 34.0886;
+
+	static float bufor[10]={0,0,0,0,0,0,0,0,0,0};
+	static int index = 0;
+	static bool first_iteration = true;
+	
+	temp = computeFilter(temp, bufor, index, first_iteration, 10);
+
 	emit tempValue(temp);
 }
 
@@ -54,7 +61,38 @@ void Filter::channel3(int value)
 	if (value>100) value = 100; if (value<0) value = 0;
 
 	float level = value;
+
+	static float bufor[10]={0,0,0,0,0,0,0,0,0,0};
+	static int index = 0;
+	static bool first_iteration = true;
+	
+	level = computeFilter(level, bufor, index, first_iteration, 10);
+
 	emit levelValue(level);
+}
+
+float Filter::computeFilter(float &value, float bufor[],
+				int &index, bool& first_iteration, int lenght)
+{
+	bufor[index] = value;
+	value = 0;
+
+	if ( (index + 1) == lenght )
+	{
+		first_iteration = false;
+		index = -1;
+	}
+
+	if (first_iteration) lenght = index + 1;
+
+	for (int i=0;i<lenght;i++)
+	{
+		value = value + bufor[i];
+	}
+	value = value / lenght;
+
+	index++;
+	return value;
 }
 
 ADCDevice Filter::adc_read;

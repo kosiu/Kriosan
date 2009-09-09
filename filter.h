@@ -35,6 +35,8 @@ signals:
     void keyValue(float voltage);
     void levelValue(float level);
     void tempValue(float temp);
+private:
+    float computeFilter(float &level, float bufor[], int &index, bool& first_iteration, int lenght);
 };
 
 #endif

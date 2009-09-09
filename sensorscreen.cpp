@@ -25,10 +25,9 @@ SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt
 
 	setupUi(this);
 	filter->adc_read.startConversions(3 , 200);
-	connect(filter, SIGNAL(levelValue(float)), this, SLOT(levelVoltage(float)));
 	connect(filter, SIGNAL(tempValue(float)), this, SLOT(temperatureVoltage(float)));
 	connect(filter, SIGNAL(keyValue(float)), this, SLOT(keyVoltage(float)));
-	connect(&(filter->adc_read), SIGNAL(channel3(int)), this, SLOT(levelPure(int)));
+	connect(&(filter->adc_read), SIGNAL(channel3(int)), this, SLOT(levelVoltage(int)));
 
 	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
 
@@ -42,17 +41,18 @@ SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt
 
 }
 
-void SensorScreen::levelPure(int value)
+void SensorScreen::levelVoltage(int value)
 {
 	QString text = QString(trUtf8(" Poziomu azotu (napięcie): %1V")).arg(value/16e3,0,'G',3);
 	levelVoltageLabel->setText(text);
-}
 
-
-void SensorScreen::levelVoltage(float value)
-{
-	QString text = QString(trUtf8(" Poziom azotu: %1% ")).arg(value);
+	int min = emptyBottleEdit->value() * 16000.0;
+	int max =  fullBottleEdit->value() * 16000.0;
+	value = (100 * (value - min)) / (max - min);
+	if (value>100) value = 100; if (value<0) value = 0;
+	text = QString(trUtf8(" Poziom azotu: %1% ")).arg(value);
 	levellabel->setText(text);
+
 }
 
 void SensorScreen::temperatureVoltage(float temp)

@@ -37,22 +37,29 @@ void Filter::channel1(int value)
 
 void Filter::channel2(int value)
 {
+
+	static int bufor[10]={0,0,0,0,0,0,0,0,0,0};
+	static int index = 0;
+	static bool first_iteration = true;
+	
+	value = computeFilter(value, bufor, index, first_iteration, 10);
+
 	//celc = 2.3412 * R - 243.4192
 	// R = 1000 * U / (14.19 - U)
 	float temp;
 	temp = 0.01067 * (float)value + 34.0886;
-
-	static float bufor[10]={0,0,0,0,0,0,0,0,0,0};
-	static int index = 0;
-	static bool first_iteration = true;
-	
-	temp = computeFilter(temp, bufor, index, first_iteration, 10);
 
 	emit tempValue(temp);
 }
 
 void Filter::channel3(int value)
 {
+	static int bufor[10]={0,0,0,0,0,0,0,0,0,0};
+	static int index = 0;
+	static bool first_iteration = true;
+	
+	value = computeFilter(value, bufor, index, first_iteration, 10);
+
 	QSettings *system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
 
 	int min =  system->value("Bottle_Min", 0.00).toDouble() * 16000;
@@ -62,16 +69,10 @@ void Filter::channel3(int value)
 
 	float level = value;
 
-	static float bufor[10]={0,0,0,0,0,0,0,0,0,0};
-	static int index = 0;
-	static bool first_iteration = true;
-	
-	level = computeFilter(level, bufor, index, first_iteration, 10);
-
 	emit levelValue(level);
 }
 
-float Filter::computeFilter(float &value, float bufor[],
+float Filter::computeFilter(int &value, int bufor[],
 				int &index, bool& first_iteration, int lenght)
 {
 	bufor[index] = value;

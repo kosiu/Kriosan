@@ -17,6 +17,7 @@
 #include <QString>
 #include <QSettings>
 #include <QSlider>
+#include <QSettings>
 
 InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -26,6 +27,8 @@ InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
 	setupUi(this);
 	backLabel->setText(QString(trUtf8("Wyjście")));
 	//QTextDocument infoText();
+
+	QSettings system("/home/kosiu/system.ini", QSettings::IniFormat);
 
 	QSettings settings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
 	QString language = settings.value("language", "pl").toString();
@@ -40,13 +43,33 @@ InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
 	};
 	if (language == "pl") {
 		textBrowser->setSource(QUrl("../resources/publicinfo_pl.html"));
-		titleBrowser->setSource(QUrl("../resources/kriosystem_pl.html"));	
+		titleBrowser->setSource(QUrl("../resources/kriosystem_pl.html"));
 	};
 
-
-	if(textBrowser->find("$DATE$")){
+	//Replacing teksts
+	if(textBrowser->find("$DATE$")||
+           textBrowser->find("$DATE$",QTextDocument::FindBackward)){
 		textBrowser->cut();
-		textBrowser->insertPlainText(QDate(2008,5,9).toString());
+		QDate date = QDate::currentDate();
+		textBrowser->insertPlainText(date.toString());
+	}
+	if(textBrowser->find("$TIME$")||
+	   textBrowser->find("$TIME$",QTextDocument::FindBackward)){
+		textBrowser->cut();
+		QTime time = QTime::currentTime();
+		textBrowser->insertPlainText(time.toString());
+	}
+	if(textBrowser->find("$SOFTWARE_VERSION$")||
+	   textBrowser->find("$SOFTWARE_VERSION$",QTextDocument::FindBackward)){
+		textBrowser->cut();
+		QString software_version = system.value("Version", "unknown").toString();
+		textBrowser->insertPlainText(software_version);
+	}
+	if(textBrowser->find("$INSPECTION_DATE$")||
+	   textBrowser->find("$INSPECTION_DATE$",QTextDocument::FindBackward)){
+		textBrowser->cut();
+		QDate date = system.value("inspection",QDate(2000,1,1)).toDate();
+		textBrowser->insertPlainText(date.toString());
 	}
 	textBrowser->moveCursor(QTextCursor::Start);
 }

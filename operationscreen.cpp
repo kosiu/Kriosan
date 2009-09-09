@@ -9,7 +9,9 @@
 // Copyright: See COPYING file that comes with this distribution
 //
 //
+#include <QTime>
 #include <QKeyEvent>
+#include <QEvent>
 #include <QLabel>
 #include <QTimer>
 #include <QSettings>
@@ -41,6 +43,9 @@ OperationScreen::OperationScreen( Filter*, Buzzer* buzz, QWidget * parent, Qt::W
 
 	settings = new QSettings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
 	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
+	
+	timeEdit->setMaximumTime(QTime(0,59,0));
+	timeEdit->setMinimumTime(QTime(0,0,0));
 
 	connect(operationTimer, SIGNAL(timeout()), this, SLOT(computeTime()));
 }
@@ -228,4 +233,29 @@ void OperationScreen::keyPressEvent( QKeyEvent * event )
 		break;
 	    }
 	}
+}
+
+bool OperationScreen::event(QEvent *event){
+	if (event->type() == QEvent::ShortcutOverride) {
+		QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+		if (ke->key() == Qt::Key_Up){
+		    if(timeEdit->hasFocus())
+		    {
+		    	qDebug("UP");
+			timeEdit->setTime(timeEdit->time().addSecs(30));
+		    }
+		    return true;
+		}
+		if (ke->key() == Qt::Key_Down) {
+		    if(timeEdit->hasFocus())
+		    {
+		    	qDebug("DOWN");
+			if(timeEdit->time()==QTime(0,0,30))
+				timeEdit->setTime(QTime(0,1,0));
+			timeEdit->setTime(timeEdit->time().addSecs(-30));
+		    }
+		    return true;
+		}
+	}
+	return QWidget::event(event);
 }

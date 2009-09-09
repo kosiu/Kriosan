@@ -18,7 +18,7 @@ function updatePower()
   var val = getPowerValue("val");
   powerView.setPName(n);
 
-  var angle = (val*1.8)-90 ;
+  var angle = (val*3.6)+90 ;
   //print("Max:" + max + " Min:" + min + " Val:" + val + " Angle:" + angle);
   powerView.pointer.resetTransform();
   //if (angle > 100 ) 

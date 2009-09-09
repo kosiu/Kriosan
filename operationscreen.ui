@@ -86,22 +86,54 @@
       <pointsize>18</pointsize>
      </font>
     </property>
+    <property name="focusPolicy" >
+     <enum>Qt::TabFocus</enum>
+    </property>
     <property name="wrapping" >
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="alignment" >
      <set>Qt::AlignCenter</set>
     </property>
+    <property name="readOnly" >
+     <bool>true</bool>
+    </property>
     <property name="buttonSymbols" >
      <enum>QAbstractSpinBox::UpDownArrows</enum>
+    </property>
+    <property name="accelerated" >
+     <bool>false</bool>
+    </property>
+    <property name="correctionMode" >
+     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
     </property>
     <property name="keyboardTracking" >
      <bool>false</bool>
     </property>
+    <property name="maximumDateTime" >
+     <datetime>
+      <hour>0</hour>
+      <minute>50</minute>
+      <second>59</second>
+      <year>2000</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="minimumDateTime" >
+     <datetime>
+      <hour>0</hour>
+      <minute>1</minute>
+      <second>0</second>
+      <year>2000</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
     <property name="maximumTime" >
      <time>
       <hour>0</hour>
-      <minute>59</minute>
+      <minute>50</minute>
       <second>59</second>
      </time>
     </property>
@@ -168,6 +200,9 @@
     </property>
     <property name="suffix" >
      <string>%</string>
+    </property>
+    <property name="minimum" >
+     <number>50</number>
     </property>
     <property name="maximum" >
      <number>100</number>

@@ -61,5 +61,6 @@ private:
 
 protected:
 	void keyPressEvent( QKeyEvent * event );
+	bool event(QEvent * event);
 };
 #endif

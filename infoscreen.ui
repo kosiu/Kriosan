@@ -195,6 +195,19 @@
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
    </widget>
+   <widget class="QLabel" name="label" >
+    <property name="geometry" >
+     <rect>
+      <x>0</x>
+      <y>300</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>www.kriosystem.com.pl</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

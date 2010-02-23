@@ -16,6 +16,7 @@
 #include "sensorscreen.h"
 #include "filter.h"
 #include "adcdevice.h"
+#include "types.h"
 
 SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -29,7 +30,7 @@ SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt
 	connect(filter, SIGNAL(keyValue(float)), this, SLOT(keyVoltage(float)));
 	connect(&(filter->adc_read), SIGNAL(channel3(int)), this, SLOT(levelVoltage(int)));
 
-	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
+        system = new QSettings(SysConfigFileName, QSettings::IniFormat);
 
 	emptyBottleEdit->setValue(system->value("Bottle_Min", 0.0).toDouble());
 	fullBottleEdit->setValue(system->value("Bottle_Max", 2.04).toDouble());
@@ -75,7 +76,7 @@ void SensorScreen::keyPressEvent( QKeyEvent * event )
 		close();
         }
 	//SELECT SWITCH
-	if (event->key() == Qt::Key_Play) {
+        if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
 		system->setValue("Bottle_Min",emptyBottleEdit->value());
 		system->setValue("Bottle_Max",fullBottleEdit->value());
 

@@ -26,7 +26,7 @@ SelectScreen::SelectScreen(QWidget *parent, Qt::WFlags f)
 
 	setupUi(this);
 	humanView->setScript("../resources/humanView.qjs" );
-	settings = new QSettings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
+        settings = new QSettings(UserConfigFileName, QSettings::IniFormat);
 	updateStatus();
 }
 
@@ -86,7 +86,7 @@ void SelectScreen::keyPressEvent( QKeyEvent * event )
 		humanView->setPValue(part);
 		updateStatus();
         } else
-        if (event->key() == Qt::Key_Play) {
+        if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
 		OperationScreenType operationType;
 		operationType.operationType = part;
 		operationType.power = power;

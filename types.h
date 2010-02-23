@@ -13,9 +13,18 @@
 #define TYPES_H
 #include <QTime>
 
-typedef enum MenuScreenType { mainView=0, optionView=1, languageView=2, /*operationView=3*/ };
+//Path to system settings ini file
+const char SysConfigFileName[] = "/home/kosiu/system.ini";
 
-typedef struct OperationScreenType {
+//Path to user settings ini file
+const char UserConfigFileName[] = "/home/kosiu/kriosan.ini";
+
+
+//MenuScreenType has tree different views
+enum MenuScreenType { mainView=0, optionView=1, languageView=2, /*operationView=3*/ };
+
+//OperationScreenType is activated with this struct
+struct OperationScreenType {
 	int operationType;	// 0 - continues operation
 				// 1 - shoulder
 				// 2 - elbow

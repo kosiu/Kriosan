@@ -15,6 +15,7 @@
 #include <QApplication>
 #include "realtimeclock.h"
 #include "inspectionscreen.h"
+#include "types.h"
 
 InspectionScreen::InspectionScreen(QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -23,7 +24,7 @@ InspectionScreen::InspectionScreen(QWidget *parent, Qt::WFlags f)
 
 	setupUi(this);
 
-	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
+        system = new QSettings(SysConfigFileName, QSettings::IniFormat);
 	inspectionDateEdit->setDate(system->value("inspection",QDate(2000,1,1)).toDate());
 	
 	QDateTime date = QDateTime::currentDateTime();
@@ -44,7 +45,7 @@ void InspectionScreen::keyPressEvent( QKeyEvent * event )
         if (event->key() == Qt::Key_Escape) {
 		close();
         }
-	if (event->key() == Qt::Key_Play) {
+        if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
 		if (inspectionDateEdit->hasFocus()) {
 			system->setValue("inspection",inspectionDateEdit->date());
 			system->sync();

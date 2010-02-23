@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>sensorScreen</class>
- <widget class="QMainWindow" name="sensorScreen" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="sensorScreen">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,20 +10,12 @@
     <height>320</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Okno Zabiegu</string>
   </property>
-  <widget class="QWidget" name="centralwidget" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>240</width>
-     <height>320</height>
-    </rect>
-   </property>
-   <widget class="QLabel" name="selectLabel" >
-    <property name="geometry" >
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="selectLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>290</y>
@@ -30,26 +23,26 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text" >
+    <property name="text">
      <string>Zapisz</string>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="backLabel" >
-    <property name="geometry" >
+   <widget class="QLabel" name="backLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>0</y>
@@ -57,38 +50,38 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="frameShadow" >
+    <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <property name="lineWidth" >
+    <property name="lineWidth">
      <number>1</number>
     </property>
-    <property name="midLineWidth" >
+    <property name="midLineWidth">
      <number>0</number>
     </property>
-    <property name="text" >
+    <property name="text">
      <string>Wyjście</string>
     </property>
-    <property name="scaledContents" >
+    <property name="scaledContents">
      <bool>false</bool>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>36</y>
@@ -96,13 +89,13 @@
       <height>24</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout" >
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <spacer name="horizontalSpacer_6" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>38</width>
          <height>17</height>
@@ -111,23 +104,23 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="levellabel" >
-       <property name="font" >
+      <widget class="QLabel" name="levellabel">
+       <property name="font">
         <font>
          <pointsize>11</pointsize>
         </font>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Poziom azotu: ??%</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -137,8 +130,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
@@ -146,13 +139,13 @@
       <height>32</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4" >
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <spacer name="horizontalSpacer_4" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>23</width>
          <height>18</height>
@@ -161,28 +154,28 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="menuNameLabel" >
-       <property name="font" >
+      <widget class="QLabel" name="menuNameLabel">
+       <property name="font">
         <font>
          <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Czujniki</string>
        </property>
-       <property name="alignment" >
+       <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_5" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>28</width>
          <height>17</height>
@@ -192,8 +185,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDoubleSpinBox" name="emptyBottleEdit" >
-    <property name="geometry" >
+   <widget class="QDoubleSpinBox" name="emptyBottleEdit">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>80</y>
@@ -201,23 +194,23 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
     </property>
-    <property name="suffix" >
+    <property name="suffix">
      <string>V</string>
     </property>
-    <property name="maximum" >
+    <property name="maximum">
      <double>2.500000000000000</double>
     </property>
-    <property name="singleStep" >
+    <property name="singleStep">
      <double>0.010000000000000</double>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_2" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>60</y>
@@ -225,20 +218,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="emptyBottleLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="emptyBottleLabel">
+       <property name="text">
         <string>Pusta butla:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -248,8 +241,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_3" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
      <rect>
       <x>130</x>
       <y>60</y>
@@ -257,20 +250,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QLabel" name="fullBottleLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="fullBottleLabel">
+       <property name="text">
         <string>Pełna butla:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -280,8 +273,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDoubleSpinBox" name="fullBottleEdit" >
-    <property name="geometry" >
+   <widget class="QDoubleSpinBox" name="fullBottleEdit">
+    <property name="geometry">
      <rect>
       <x>130</x>
       <y>80</y>
@@ -289,23 +282,23 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
     </property>
-    <property name="suffix" >
+    <property name="suffix">
      <string>V</string>
     </property>
-    <property name="maximum" >
+    <property name="maximum">
      <double>2.500000000000000</double>
     </property>
-    <property name="singleStep" >
+    <property name="singleStep">
      <double>0.010000000000000</double>
     </property>
    </widget>
-   <widget class="Line" name="line" >
-    <property name="geometry" >
+   <widget class="Line" name="line">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>130</y>
@@ -313,12 +306,12 @@
       <height>20</height>
      </rect>
     </property>
-    <property name="orientation" >
+    <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_4" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_4">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>170</y>
@@ -326,20 +319,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_9" >
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
      <item>
-      <widget class="QLabel" name="serviceKeyMinLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="serviceKeyMinLabel">
+       <property name="text">
         <string>Minimum:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -349,8 +342,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDoubleSpinBox" name="serviceKeyMinEdit" >
-    <property name="geometry" >
+   <widget class="QDoubleSpinBox" name="serviceKeyMinEdit">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>190</y>
@@ -358,23 +351,23 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
     </property>
-    <property name="suffix" >
+    <property name="suffix">
      <string>V</string>
     </property>
-    <property name="maximum" >
+    <property name="maximum">
      <double>2.500000000000000</double>
     </property>
-    <property name="singleStep" >
+    <property name="singleStep">
      <double>0.010000000000000</double>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="serviceKeyMaxEdit" >
-    <property name="geometry" >
+   <widget class="QDoubleSpinBox" name="serviceKeyMaxEdit">
+    <property name="geometry">
      <rect>
       <x>130</x>
       <y>190</y>
@@ -382,23 +375,23 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
     </property>
-    <property name="suffix" >
+    <property name="suffix">
      <string>V</string>
     </property>
-    <property name="maximum" >
+    <property name="maximum">
      <double>2.500000000000000</double>
     </property>
-    <property name="singleStep" >
+    <property name="singleStep">
      <double>0.010000000000000</double>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_5" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_5">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>146</y>
@@ -406,13 +399,13 @@
       <height>24</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_10" >
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
      <item>
-      <spacer name="horizontalSpacer_6" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>38</width>
          <height>17</height>
@@ -421,23 +414,23 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="serviceKeyLabel" >
-       <property name="font" >
+      <widget class="QLabel" name="serviceKeyLabel">
+       <property name="font">
         <font>
          <pointsize>11</pointsize>
         </font>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Klucz serwisowy: ?,???V</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -447,8 +440,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_6" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>112</y>
@@ -456,20 +449,20 @@
       <height>21</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_11" >
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
      <item>
-      <widget class="QLabel" name="levelVoltageLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="levelVoltageLabel">
+       <property name="text">
         <string> Poziomu azotu (napięcie): ?,??V</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -479,8 +472,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="Line" name="line_2" >
-    <property name="geometry" >
+   <widget class="Line" name="line_2">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>220</y>
@@ -488,12 +481,12 @@
       <height>20</height>
      </rect>
     </property>
-    <property name="orientation" >
+    <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_7" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_7">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>236</y>
@@ -501,13 +494,13 @@
       <height>24</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_12" >
+    <layout class="QHBoxLayout" name="horizontalLayout_12">
      <item>
-      <spacer name="horizontalSpacer_6" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>38</width>
          <height>17</height>
@@ -516,23 +509,23 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="temperatureLabel" >
-       <property name="font" >
+      <widget class="QLabel" name="temperatureLabel">
+       <property name="font">
         <font>
          <pointsize>11</pointsize>
         </font>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Termometr: ???K</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -542,8 +535,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDoubleSpinBox" name="temperatureThresholdEdit" >
-    <property name="geometry" >
+   <widget class="QDoubleSpinBox" name="temperatureThresholdEdit">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>280</y>
@@ -551,26 +544,26 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>14</pointsize>
      </font>
     </property>
-    <property name="suffix" >
+    <property name="suffix">
      <string>K</string>
     </property>
-    <property name="decimals" >
-     <number>1</number>
+    <property name="decimals">
+     <number>0</number>
     </property>
-    <property name="maximum" >
-     <double>200.000000000000000</double>
+    <property name="maximum">
+     <double>400.000000000000000</double>
     </property>
-    <property name="singleStep" >
-     <double>0.100000000000000</double>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_8" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_8">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>260</y>
@@ -578,20 +571,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_13" >
+    <layout class="QHBoxLayout" name="horizontalLayout_13">
      <item>
-      <widget class="QLabel" name="TemperatureThresholdLabel" >
-       <property name="text" >
+      <widget class="QLabel" name="TemperatureThresholdLabel">
+       <property name="text">
         <string>Temperatura progowa:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -601,8 +594,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_9" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_9">
+    <property name="geometry">
      <rect>
       <x>130</x>
       <y>170</y>
@@ -610,20 +603,20 @@
       <height>21</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_15" >
+    <layout class="QHBoxLayout" name="horizontalLayout_15">
      <item>
-      <widget class="QLabel" name="serviceKeyMaxLabel_2" >
-       <property name="text" >
+      <widget class="QLabel" name="serviceKeyMaxLabel_2">
+       <property name="text">
         <string>Maksimum:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>

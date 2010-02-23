@@ -43,8 +43,8 @@ MenuScreen::MenuScreen(QTranslator* trans, Filter* filterArg, Buzzer* buzzerArg,
 	setupUi(this);
 	levelView2->setScript("../resources/levelView2.qjs" );
 
-	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
-	settings = new QSettings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
+        system = new QSettings(SysConfigFileName, QSettings::IniFormat);
+        settings = new QSettings(UserConfigFileName, QSettings::IniFormat);
 
 	menuScreenType = mainView;
 	noShowed = true;
@@ -207,7 +207,7 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
         }
 
 	//SELECT SWITCH
-	if (event->key() == Qt::Key_Play) {
+        if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
 		int menuIndex = menuView->currentRow();
 		switch(menuScreenType){
 		    case mainView:

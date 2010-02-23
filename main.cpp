@@ -36,8 +36,8 @@ int main(int argc, char ** argv)
 	QApplication app( argc, argv );
 
 	//Reading language settings and translator installing
-	QSettings settings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
-	QSettings system("/home/kosiu/system.ini", QSettings::IniFormat);
+        QSettings settings(UserConfigFileName, QSettings::IniFormat);
+        QSettings system(SysConfigFileName, QSettings::IniFormat);
 	QTranslator translator;
 	QString language = settings.value("language", "pl").toString();
 	if (language == "en") {translator.load("kriosan_en");qDebug("angielski");}

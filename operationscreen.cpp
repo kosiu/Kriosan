@@ -41,8 +41,8 @@ OperationScreen::OperationScreen( Filter*, Buzzer* buzz, QWidget * parent, Qt::W
 	powerView->setScript("../resources/powerView.qjs");
 	timeView->setScript("../resources/timeView.qjs");
 
-	settings = new QSettings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
-	system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
+        settings = new QSettings(UserConfigFileName, QSettings::IniFormat);
+        system = new QSettings(SysConfigFileName, QSettings::IniFormat);
 	
 	timeEdit->setMaximumTime(QTime(0,59,0));
 	timeEdit->setMinimumTime(QTime(0,0,0));
@@ -220,7 +220,7 @@ void OperationScreen::keyPressEvent( QKeyEvent * event )
 	        emit( SendShowSelectScreen());
             hide(); stopOperation();
         }
-	if (event->key() == Qt::Key_Play) {
+        if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
 	    //Button select pressed
 	    switch (buttonState) {
 		case start:

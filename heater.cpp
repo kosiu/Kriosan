@@ -9,6 +9,7 @@
 //
 //
 #include "heater.h"
+#include "types.h"
 #include <QSettings>
 #include <QFile>
 
@@ -57,7 +58,7 @@ void Heater::run()
 		bool heating = heaterOn;
 	mutex.unlock();
 
-	QSettings system("/home/kosiu/system.ini", QSettings::IniFormat);
+        QSettings system(SysConfigFileName, QSettings::IniFormat);
 
 	QString gpioName = QString("/proc/gpio/GPIO") + QString(system.value("heaterGPIO","17").toString());
 	qDebug("nazwa: %s",qPrintable(gpioName));

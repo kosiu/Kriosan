@@ -13,6 +13,7 @@
 #include "adcdevice.h"
 #include <QSettings>
 #include "QtDebug"
+#include "types.h"
 
 Filter::Filter(QObject *parent) : QObject(parent)
 {
@@ -60,7 +61,7 @@ void Filter::channel3(int value)
 	
 	value = computeFilter(value, bufor, index, first_iteration, 10);
 
-	QSettings *system = new QSettings("/home/kosiu/system.ini", QSettings::IniFormat);
+        QSettings *system = new QSettings(SysConfigFileName, QSettings::IniFormat);
 
 	int min =  system->value("Bottle_Min", 0.00).toDouble() * 16000;
 	int max =  system->value("Bottle_Max", 2.04).toDouble() * 16000;

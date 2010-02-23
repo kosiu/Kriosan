@@ -13,6 +13,7 @@
 #include <QSettings>
 #include <QFile>
 #include "buzzer.h"
+#include "types.h"
 
 Buzzer::Buzzer(QObject *parent)
    : QThread(parent), quit(false)
@@ -41,7 +42,7 @@ void Buzzer::run()
 		int msecTime = msec;
 	mutex.unlock();
 
-	QSettings system("/home/kosiu/system.ini", QSettings::IniFormat);
+        QSettings system(SysConfigFileName, QSettings::IniFormat);
 
 	QString gpioName = QString("/proc/gpio/GPIO") +
 		QString(system.value("beeperGPIO","16").toString());

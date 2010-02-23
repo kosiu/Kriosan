@@ -15,11 +15,13 @@
 #include <QString>
 #include <QTime>
 #include "selectscreen.h"
+#include "buzzer.h"
 
-SelectScreen::SelectScreen(QWidget *parent, Qt::WFlags f)
+SelectScreen::SelectScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
+        mBuzzer = buzzer;
 
 	part =1;
 	size =1;
@@ -70,6 +72,7 @@ void SelectScreen::updateStatus(){
 
 void SelectScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		emit(SendShowMenuScreen(mainView));hide();
@@ -97,7 +100,8 @@ void SelectScreen::keyPressEvent( QKeyEvent * event )
 
 bool SelectScreen::event(QEvent *event){
 	if (event->type() == QEvent::ShortcutOverride) {
-		QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+                mBuzzer->beep();
+                QKeyEvent *ke = static_cast<QKeyEvent *>(event);
 		if (ke->key() == Qt::Key_Up){
 		    size++;if (size>3) size = 1;
 		    humanView->setPName("size");

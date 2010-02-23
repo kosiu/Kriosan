@@ -26,7 +26,7 @@ public:
 	~Buzzer();
 
 public slots:
-	void beep(int msec);
+        void beep(int msec = 50);
 
 private:
 	QWaitCondition cond;

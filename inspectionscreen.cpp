@@ -16,11 +16,13 @@
 #include "realtimeclock.h"
 #include "inspectionscreen.h"
 #include "types.h"
+#include "buzzer.h"
 
-InspectionScreen::InspectionScreen(QWidget *parent, Qt::WFlags f)
+InspectionScreen::InspectionScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
+        mBuzzer = buzzer;
 
 	setupUi(this);
 
@@ -41,6 +43,7 @@ void InspectionScreen::changeSelectName(QWidget * old, QWidget * now)
 
 void InspectionScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		close();

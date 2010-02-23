@@ -26,7 +26,7 @@
 OperationScreen::OperationScreen( Filter*, Buzzer* buzz, QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
 {
-	buzzer = buzz;
+        mBuzzer = buzz;
 	
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
 
@@ -134,7 +134,7 @@ void OperationScreen::startOperation()
 {	qDebug("czujnik: %f, prog: %f",temp,system->value("Temperature",77).toDouble());
 	if (temp<system->value("Temperature",77).toDouble()){
 		heater->turnOn(powerEdit->value());
-		buzzer->beep(70);
+                mBuzzer->beep(70);
 		setStyleSheet(
 			"QMainWindow{background-image: url(../resources/background2.png);}");
 		buttonState = stop;
@@ -161,7 +161,7 @@ void OperationScreen::stopOperation()
 {	
 	if(buttonState==stop){
 		heater->turnOff();
-		buzzer->beep(100);
+                mBuzzer->beep(100);
 		setStyleSheet(
 			"QMainWindow{background-image: url(../resources/background.png);}");
 		operationTimer->stop();
@@ -213,6 +213,7 @@ void OperationScreen::overheat(float tempArg)
 
 void OperationScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
         if (event->key() == Qt::Key_Escape) {
 	    if(operationScreenType==0)
 		emit( SendShowMenuScreen( mainView ));
@@ -237,6 +238,7 @@ void OperationScreen::keyPressEvent( QKeyEvent * event )
 
 bool OperationScreen::event(QEvent *event){
 	if (event->type() == QEvent::ShortcutOverride) {
+                mBuzzer->beep();
 		QKeyEvent *ke = static_cast<QKeyEvent *>(event);
 		if (ke->key() == Qt::Key_Up){
 		    if(timeEdit->hasFocus())

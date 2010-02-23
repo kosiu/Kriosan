@@ -14,16 +14,20 @@
 
 #include "ui_infoscreen.h"
 class QMainWindow;
+class Buzzer;
 
 class InfoScreen: public QMainWindow, public Ui::infoScreen
 {
 Q_OBJECT
 
 public:
-	InfoScreen(QWidget * parent = 0, Qt::WFlags f = 0);
+        InfoScreen(Buzzer* buzzer, QWidget * parent = 0, Qt::WFlags f = 0);
 
 protected:
 	virtual void keyPressEvent( QKeyEvent * event );
+
+private:
+        Buzzer* mBuzzer;
 };
 
 #endif

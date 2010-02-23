@@ -55,7 +55,7 @@ private:
 	void doLabels();
 	QSettings* settings;
 	QSettings* system;
-	Buzzer* buzzer;
+        Buzzer* mBuzzer;
 	Heater* heater;
 	float temp;
 

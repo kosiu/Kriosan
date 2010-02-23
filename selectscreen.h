@@ -17,13 +17,14 @@
 class QMainWindow;
 class QSettings;
 class QTime;
+class Buzzer;
 
 class SelectScreen: public QMainWindow, public Ui::selectScreen
 {
 Q_OBJECT
 
 public:
-	SelectScreen(QWidget * parent = 0, Qt::WFlags f = 0);
+        SelectScreen(Buzzer* buzzer, QWidget * parent = 0, Qt::WFlags f = 0);
 
 public slots:
 	void showSelectScreen();
@@ -39,6 +40,7 @@ private:
 	QSettings* settings;
 	int power;
 	QTime time;
+        Buzzer* mBuzzer;
 
 protected:
 	void keyPressEvent( QKeyEvent * event );

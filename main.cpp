@@ -89,7 +89,7 @@ int main(int argc, char ** argv)
 
 	//Windows initialisation
 	OperationScreen operationScreen(filter, buzzer);
-	SelectScreen* selectScreen = new SelectScreen();
+        SelectScreen* selectScreen = new SelectScreen(buzzer);
 	MenuScreen* menuScreen = new MenuScreen(&translator, filter, buzzer, serviceKey);
 	//some IFDEF should be
 	menuScreen->setGeometry(0,0,240,320);

@@ -33,7 +33,7 @@ MenuScreen::MenuScreen(QTranslator* trans, Filter* filterArg, Buzzer* buzzerArg,
 			 bool serviceKeyArg, QWidget * parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
-	buzzer=buzzerArg;
+	mBuzzer=buzzerArg;
 	filter=filterArg;
 	serviceKey = serviceKeyArg;
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
@@ -189,6 +189,7 @@ void MenuScreen::doLanguageView(){
 
 void MenuScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
 	OperationScreenType operationType;
 
 	//ESCAPE SWITCH
@@ -239,17 +240,17 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 			    break;
 			    case 2:
 				//Public Information
-				infoScreen = new InfoScreen();
+                                infoScreen = new InfoScreen(mBuzzer);
 				infoScreen->show();
 			    break;
 			    case 3:
 				//Inspection
-				inspectionScreen = new InspectionScreen();
+                                inspectionScreen = new InspectionScreen(mBuzzer);
 				inspectionScreen->show();
 			    break;
 			    case 4:
 				//Calibration
-				sensorScreen = new SensorScreen(filter, buzzer);
+				sensorScreen = new SensorScreen(filter, mBuzzer);
 				sensorScreen->show();
 			    break;
 			};

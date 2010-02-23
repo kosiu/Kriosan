@@ -18,11 +18,13 @@
 #include <QSettings>
 #include <QSlider>
 #include <QSettings>
+#include "buzzer.h"
 
-InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
+InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
+        mBuzzer = buzzer;
 	
 	setupUi(this);
 	backLabel->setText(QString(trUtf8("Wyjście")));
@@ -76,6 +78,7 @@ InfoScreen::InfoScreen(QWidget *parent, Qt::WFlags f)
 
 void InfoScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		close();

@@ -36,6 +36,7 @@ private slots:
 private:
 	Filter* filter;
 	QSettings* system;
+        Buzzer* mBuzzer;
 };
 
 #endif

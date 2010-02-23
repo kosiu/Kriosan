@@ -44,7 +44,7 @@ signals:
 	void SendShowSelectScreen();
 
 private:
-	InfoScreen* infoScreen;
+        InfoScreen* infoScreen;
 	InspectionScreen* inspectionScreen;
 	SelectScreen* selectScreen;
 	SensorScreen* sensorScreen;
@@ -59,7 +59,7 @@ private:
 	QTranslator* translator;
 	bool noShowed;
 	Filter* filter;
-	Buzzer* buzzer;
+        Buzzer* mBuzzer;
 	bool serviceKey;
 
 protected:

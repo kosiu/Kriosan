@@ -17,11 +17,14 @@
 #include "filter.h"
 #include "adcdevice.h"
 #include "types.h"
+#include "buzzer.h"
 
-SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzer,QWidget *parent, Qt::WFlags f)
+SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzerArg,QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
 {
 	filter=filterArg;
+        mBuzzer = buzzerArg;
+
 	setWindowFlags(windowFlags()|Qt::FramelessWindowHint);
 
 	setupUi(this);
@@ -70,6 +73,7 @@ void SensorScreen::keyVoltage(float voltage)
 
 void SensorScreen::keyPressEvent( QKeyEvent * event )
 {
+        mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		filter->adc_read.startConversions(2 , 250);

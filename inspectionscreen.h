@@ -15,16 +15,18 @@
 #include "ui_inspectionscreen.h"
 class QMainWindow;
 class QSettings;
+class Buzzer;
 
 class InspectionScreen: public QMainWindow, public Ui::inspectionScreen
 {
 Q_OBJECT
 
 public:
-	InspectionScreen(QWidget * parent = 0, Qt::WFlags f = 0);
+        InspectionScreen(Buzzer* buzzer, QWidget * parent = 0, Qt::WFlags f = 0);
 
 private:
 	QSettings* system;
+        Buzzer* mBuzzer;
 
 private slots:
 	void changeSelectName(QWidget * old, QWidget * now);

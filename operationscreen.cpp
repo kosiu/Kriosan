@@ -213,7 +213,7 @@ void OperationScreen::overheat(float tempArg)
 
 void OperationScreen::keyPressEvent( QKeyEvent * event )
 {
-        mBuzzer->beep();
+        //mBuzzer->beep();
         if (event->key() == Qt::Key_Escape) {
 	    if(operationScreenType==0)
 		emit( SendShowMenuScreen( mainView ));
@@ -238,7 +238,7 @@ void OperationScreen::keyPressEvent( QKeyEvent * event )
 
 bool OperationScreen::event(QEvent *event){
 	if (event->type() == QEvent::ShortcutOverride) {
-                mBuzzer->beep();
+                //mBuzzer->beep();
 		QKeyEvent *ke = static_cast<QKeyEvent *>(event);
 		if (ke->key() == Qt::Key_Up){
 		    if(timeEdit->hasFocus())

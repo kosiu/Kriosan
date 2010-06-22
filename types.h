@@ -11,13 +11,14 @@
 //
 #ifndef TYPES_H
 #define TYPES_H
+#include "types.h"
 #include <QTime>
 
 //Path to system settings ini file
-const char SysConfigFileName[] = "/home/kosiu/system.ini";
+const char SysConfigFileName[] = "/media/gum/home/kosiu/system.ini";
 
 //Path to user settings ini file
-const char UserConfigFileName[] = "/home/kosiu/kriosan.ini";
+const char UserConfigFileName[] ="/media/gum/home/kosiu/kriosan.ini";
 
 
 //MenuScreenType has tree different views

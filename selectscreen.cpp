@@ -72,7 +72,7 @@ void SelectScreen::updateStatus(){
 
 void SelectScreen::keyPressEvent( QKeyEvent * event )
 {
-        mBuzzer->beep();
+        //mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		emit(SendShowMenuScreen(mainView));hide();
@@ -100,7 +100,7 @@ void SelectScreen::keyPressEvent( QKeyEvent * event )
 
 bool SelectScreen::event(QEvent *event){
 	if (event->type() == QEvent::ShortcutOverride) {
-                mBuzzer->beep();
+                //mBuzzer->beep();
                 QKeyEvent *ke = static_cast<QKeyEvent *>(event);
 		if (ke->key() == Qt::Key_Up){
 		    size++;if (size>3) size = 1;

@@ -189,11 +189,11 @@ void MenuScreen::doLanguageView(){
 
 void MenuScreen::keyPressEvent( QKeyEvent * event )
 {
-        mBuzzer->beep();
 	OperationScreenType operationType;
 
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {qDebug("menuType ESC: %d",menuScreenType);
+	        //mBuzzer->beep();
 		switch(menuScreenType){
 			case mainView:
 				if (system->value("Exit", 1).toInt() == 1){
@@ -209,6 +209,7 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 
 	//SELECT SWITCH
         if ((event->key() == Qt::Key_Play)||(event->key() == Qt::Key_F2)) {
+	        //mBuzzer->beep();
 		int menuIndex = menuView->currentRow();
 		switch(menuScreenType){
 		    case mainView:

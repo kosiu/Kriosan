@@ -1,7 +1,7 @@
 CODECFORSRC = UTF-8
 CODECFORTR = UTF-8
 
-#include(../common.pri)
+include(../common.pri)
 contains( PLATFORM, arm ){
     LIBS += -lustandardkbddriver
     INCLUDEPATH += ../ustandardkbddriver

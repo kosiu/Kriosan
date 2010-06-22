@@ -19,6 +19,7 @@
 #include <QSlider>
 #include <QSettings>
 #include "buzzer.h"
+#include "types.h"
 
 InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
     :QMainWindow(parent, f)
@@ -30,9 +31,9 @@ InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
 	backLabel->setText(QString(trUtf8("Wyjście")));
 	//QTextDocument infoText();
 
-	QSettings system("/home/kosiu/system.ini", QSettings::IniFormat);
+        QSettings settings(UserConfigFileName, QSettings::IniFormat);
+        QSettings system(SysConfigFileName, QSettings::IniFormat);
 
-	QSettings settings("/home/kosiu/kriosan.ini", QSettings::IniFormat);
 	QString language = settings.value("language", "pl").toString();
 
 	if (language == "en") {
@@ -78,7 +79,7 @@ InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
 
 void InfoScreen::keyPressEvent( QKeyEvent * event )
 {
-        mBuzzer->beep();
+        //mBuzzer->beep();
 	//ESCAPE SWITCH
         if (event->key() == Qt::Key_Escape) {
 		close();

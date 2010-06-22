@@ -13,6 +13,7 @@
 #include <QSettings>
 #include <QProcess>
 #include <QApplication>
+#include <QDateTime>
 #include "realtimeclock.h"
 #include "inspectionscreen.h"
 #include "types.h"
@@ -57,8 +58,22 @@ void InspectionScreen::keyPressEvent( QKeyEvent * event )
 			sync.waitForFinished();
 		}
 		if (dateTimeEdit) {
-			RealTimeClock rtc;
-			rtc.set(dateTimeEdit->dateTime());
+			//RealTimeClock rtc;
+			//rtc.set(dateTimeEdit->dateTime());
+			setTime(dateTimeEdit->dateTime());
 		}
 	}
+}
+
+void InspectionScreen::setTime( QDateTime dateTime)
+{
+			QString executableString = dateTime.toString("MMddhhmmyyyy");
+			executableString.prepend("/bin/date -s ");
+			QProcess systemDate;
+			systemDate.start(executableString);
+			systemDate.waitForFinished();
+			QProcess hwDate;
+			hwDate.start("/sbin/hwclock --systohc");
+			hwDate.waitForFinished();
+			
 }

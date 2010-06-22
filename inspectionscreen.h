@@ -16,6 +16,7 @@
 class QMainWindow;
 class QSettings;
 class Buzzer;
+class QDateTime;
 
 class InspectionScreen: public QMainWindow, public Ui::inspectionScreen
 {
@@ -27,6 +28,7 @@ public:
 private:
 	QSettings* system;
         Buzzer* mBuzzer;
+	void setTime( QDateTime dateTime);
 
 private slots:
 	void changeSelectName(QWidget * old, QWidget * now);

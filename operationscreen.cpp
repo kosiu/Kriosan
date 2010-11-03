@@ -92,9 +92,9 @@ void OperationScreen::doLabels()
 {
 	backLabel->setText(trUtf8("Wyjście"));
 	selectLabel->setText(trUtf8("Start"));
-	timeLabel->setText(trUtf8("Czas zabiegu:"));
-	powerLabel->setText(trUtf8("Intensywność:"));
-	levelLabel->setText(trUtf8("Poziom azotu:"));
+	timeLabel->setText(trUtf8("Czas zabiegu"));
+	powerLabel->setText(trUtf8("Intensywność"));
+	levelLabel->setText(trUtf8("Poziom azotu"));
 }
 
 void OperationScreen::levelValue(float value)
@@ -146,7 +146,7 @@ void OperationScreen::startOperation()
 		timeEdit->setFocusPolicy(Qt::NoFocus);
 		timeEdit->clearFocus();
 		if(operationScreenType != 0){
-			timeLabel->setText(trUtf8("Pozostały czas:"));
+			timeLabel->setText(trUtf8("Pozostały czas"));
 		};
 			operationTimer->start(1000);
 	}
@@ -170,7 +170,7 @@ void OperationScreen::stopOperation()
 		levelView->setPName("heat");
 		levelView->setPValue(0);
 		timeEdit->setTime(lastTime);
-		timeLabel->setText(trUtf8("Czas zabiegu:"));
+		timeLabel->setText(trUtf8("Czas zabiegu"));
 		//Enablig focus
 		if(operationScreenType != 0){
 			timeEdit->setFocusPolicy(Qt::WheelFocus);

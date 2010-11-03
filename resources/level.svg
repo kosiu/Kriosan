@@ -43,16 +43,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:zoom="1.4"
+     inkscape:cx="274.52463"
+     inkscape:cy="693.62631"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="640"
      inkscape:window-height="654"
-     inkscape:window-x="578"
-     inkscape:window-y="144" />
+     inkscape:window-x="579"
+     inkscape:window-y="143" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -83,7 +83,7 @@
        id="heatera"
        sodipodi:nodetypes="ccczcczcc" />
     <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0100;stroke-width:8.4537096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:8.45370959999999982;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 369.27777,51.299993 L 369.27777,384.33143 L 407.83003,384.33143 C 407.83003,384.33143 422.06784,380.95536 422.82257,393.01922 C 423.53217,404.36208 408.54396,401.70699 408.54396,401.70699 L 327.8698,401.70699 C 327.8698,401.70699 313.3133,401.28011 312.87726,411.11875 C 312.4092,421.67996 328.58374,420.5305 328.58374,420.5305 L 415.68326,420.5305"
        id="heaterb"
        sodipodi:nodetypes="ccczcczcc" />

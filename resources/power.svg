@@ -105,29 +105,17 @@
    offset="0"
    style="stop-color:#FFFFFF;stop-opacity:0"
    id="stop3498" />
+	
+	
+	
 	<stop
-   offset="0.0893"
-   style="stop-color:#FFFEF5;stop-opacity:0.0893"
-   id="stop3500" />
-	<stop
-   offset="0.235"
-   style="stop-color:#FEFCE2;stop-opacity:0.235"
-   id="stop3502" />
-	<stop
-   offset="0.4191"
-   style="stop-color:#FEF8C4;stop-opacity:0.4191"
-   id="stop3504" />
-	<stop
-   offset="0.6343"
-   style="stop-color:#FDF499;stop-opacity:0.6343"
+   offset="0.63429999"
+   style="stop-color:#4ff400;stop-opacity:0.27586207;"
    id="stop3506" />
-	<stop
-   offset="0.8727"
-   style="stop-color:#FCF05A;stop-opacity:0.8727"
-   id="stop3508" />
+	
 	<stop
    offset="1"
-   style="stop-color:#FCEE21"
+   style="stop-color:#00ee21;stop-opacity:1;"
    id="stop3510" />
 </radialGradient>
 
@@ -146,7 +134,7 @@
    id="stop3515" />
 	<stop
    offset="1"
-   style="stop-color:#EB2227"
+   style="stop-color:#ebff27;stop-opacity:1;"
    id="stop3517" />
 </radialGradient>
 
@@ -170,11 +158,11 @@
    id="stop3528" />
 	<stop
    offset="0.8973"
-   style="stop-color:#42AC5E;stop-opacity:0.8973"
+   style="stop-color:#42acff;stop-opacity:0.89803922;"
    id="stop3530" />
 	<stop
    offset="1"
-   style="stop-color:#03A550"
+   style="stop-color:#03a5ff;stop-opacity:1;"
    id="stop3532" />
 </radialGradient>
 

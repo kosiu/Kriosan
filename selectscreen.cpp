@@ -120,5 +120,13 @@ bool SelectScreen::event(QEvent *event){
 		    return true;
 		}
 	}
+	if (event->type() == QEvent::LanguageChange) {
+		menuNameLabel->setText(trUtf8("Wybierz zabieg"));
+	}
 	return QWidget::event(event);
 }
+
+void QWidget::changeEvent(QEvent *event)
+ {
+ }
+

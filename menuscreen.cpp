@@ -79,7 +79,7 @@ void MenuScreen::doLabels()
 		backLabel->show();
 	}
 	selectLabel->setText(trUtf8("Wybierz"));
-	levelLabel->setText(trUtf8("Poziom azotu:"));	
+	levelLabel->setText(trUtf8("Poziom azotu"));	
 	backLabel->setText(trUtf8("Wyjście"));
 }
 

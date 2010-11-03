@@ -31,7 +31,7 @@ QLabel
 	border-radius: 3;
 	/*padding-right: 2px;
 	padding-left: 2px;*/
-	background-color:  rgba(0,0,0,100);	
+	background-color:  rgba(0,0,0,0);	
 }
 
 QLabel#backLabel
@@ -73,6 +73,12 @@ QAbstractSpinBox
 	border-radius: 5;
 	border-width: 3;
 }
+
+QAbstractSpinBox#levelEdit
+{
+	background-color: rgba(41,165,213,200);
+}
+
 
 QAbstractSpinBox:focus 
 {

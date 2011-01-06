@@ -54,7 +54,7 @@ MenuScreen::MenuScreen(QTranslator* trans, Filter* filterArg, Buzzer* buzzerArg,
 void MenuScreen::levelValue(float value)
 {
 	if(isActiveWindow()){
-		levelEdit->setValue(value);
+		levelEdit->setValue((int)value);
 		levelView2->setPName("value");
 		levelView2->setPValue(value);
 	}
@@ -73,7 +73,7 @@ void MenuScreen::showMenuScreen(MenuScreenType menuType)
 
 void MenuScreen::doLabels()
 {
-	if (system->value("Exit", 1).toInt() == 0 && menuScreenType == mainView){
+	if (system->value("Exit", 0).toInt() == 0 && menuScreenType == mainView){
 		backLabel->hide();
 	} else {
 		backLabel->show();

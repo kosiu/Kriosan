@@ -126,7 +126,4 @@ bool SelectScreen::event(QEvent *event){
 	return QWidget::event(event);
 }
 
-void QWidget::changeEvent(QEvent *event)
- {
- }
 

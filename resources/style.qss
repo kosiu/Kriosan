@@ -77,6 +77,8 @@ QAbstractSpinBox
 QAbstractSpinBox#levelEdit
 {
 	background-color: rgba(41,165,213,200);
+	padding-left: -1px;
+	padding-right: -1px;
 }
 
 

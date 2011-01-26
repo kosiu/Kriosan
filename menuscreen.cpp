@@ -196,7 +196,7 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 	        //mBuzzer->beep();
 		switch(menuScreenType){
 			case mainView:
-				if (system->value("Exit", 1).toInt() == 1){
+				if (system->value("Exit", 0).toInt() == 1){
 					close();
 				}
 				break;

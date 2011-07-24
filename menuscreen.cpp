@@ -155,11 +155,11 @@ void MenuScreen::doOptionView(){
 
 	if(serviceKey)
 	{
-		menuItem = new QListWidgetItem(trUtf8("Termin przeglądu"), menuView);
+		menuItem = new QListWidgetItem("Termin przeglądu", menuView);
 		menuItem->setIcon(QIcon("../resources/configure.png"));
 		menuItem->setTextAlignment(Qt::AlignHCenter);
 	
-		menuItem = new QListWidgetItem(trUtf8("Kalibracja"), menuView);
+		menuItem = new QListWidgetItem("Kalibracja", menuView);
 		menuItem->setIcon(QIcon("../resources/configure.png"));
 		menuItem->setTextAlignment(Qt::AlignHCenter);
 	}
@@ -171,16 +171,20 @@ void MenuScreen::doLanguageView(){
 	doLabels();
 	menuNameLabel->setText(trUtf8("Język"));
 
-	menuItem = new QListWidgetItem(trUtf8("Polski"), menuView);
-	menuItem->setIcon(QIcon("../resources/pl.png"));
+	menuItem = new QListWidgetItem("Český", menuView);
+	menuItem->setIcon(QIcon("../resources/cz.png"));
 	menuItem->setTextAlignment(Qt::AlignHCenter);
-	
-	menuItem = new QListWidgetItem(trUtf8("Angielski"), menuView);
+
+	menuItem = new QListWidgetItem("Deutsch", menuView);
+	menuItem->setIcon(QIcon("../resources/de.png"));
+	menuItem->setTextAlignment(Qt::AlignHCenter);
+
+	menuItem = new QListWidgetItem("English", menuView);
 	menuItem->setIcon(QIcon("../resources/gb.png"));
 	menuItem->setTextAlignment(Qt::AlignHCenter);
 
-	menuItem = new QListWidgetItem(trUtf8("Niemiecki"), menuView);
-	menuItem->setIcon(QIcon("../resources/de.png"));
+	menuItem = new QListWidgetItem("Polski", menuView);
+	menuItem->setIcon(QIcon("../resources/pl.png"));
 	menuItem->setTextAlignment(Qt::AlignHCenter);
 
 	menuView->setCurrentRow(0);
@@ -259,12 +263,22 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 		    case languageView:
 			switch(menuIndex){
 			    case 0:
-				//Set Polisch language
-				settings->setValue("language", QString("pl"));
+				//Set Czech language
+				settings->setValue("language", QString("cz"));
 				qApp->removeTranslator(translator);
+				translator->load("kriosan_cz");
+				qApp->installTranslator(translator);
 				emit(SendShowMenuScreen(optionView));
 			    break;
 			    case 1:
+				//Set German language
+				settings->setValue("language", QString("de"));
+				qApp->removeTranslator(translator);
+				translator->load("kriosan_de");
+				qApp->installTranslator(translator);
+				emit(SendShowMenuScreen(optionView));
+			    break;
+			    case 2:
 				//Set Englisch language
 				settings->setValue("language", QString("en"));
 				qApp->removeTranslator(translator);
@@ -272,12 +286,10 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 				qApp->installTranslator(translator);
 				emit(SendShowMenuScreen(optionView));
 			    break;
-			    case 2:
-				//Set German language
-				settings->setValue("language", QString("de"));
+			    case 3:
+				//Set Polisch language
+				settings->setValue("language", QString("pl"));
 				qApp->removeTranslator(translator);
-				translator->load("kriosan_de");
-				qApp->installTranslator(translator);
 				emit(SendShowMenuScreen(optionView));
 			    break;
 			    settings->sync();
@@ -291,4 +303,3 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 
 	}
 }
-

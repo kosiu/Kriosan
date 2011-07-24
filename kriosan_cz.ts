@@ -1,147 +1,148 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS><TS version="1.1" language="pl_PL">
 <defaultcodec>UTF-8</defaultcodec>
 <context encoding="UTF-8">
     <name>InfoScreen</name>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
 </context>
 <context encoding="UTF-8">
     <name>MenuScreen</name>
     <message>
         <source>Wybierz</source>
-        <translation>Select</translation>
-    </message>
-    <message>
-        <source>Menu Startowe</source>
-        <translation>Start Menu</translation>
-    </message>
-    <message>
-        <source>Zabieg zdefiniowany</source>
-        <translation>Select operation</translation>
-    </message>
-    <message>
-        <source>Opcje</source>
-        <translation>Options</translation>
-    </message>
-    <message>
-        <source>Informacje</source>
-        <translation>About</translation>
+        <translation>Vybrat</translation>
     </message>
     <message>
         <source>Poziom azotu</source>
-        <translation>Nitrogen level</translation>
+        <translation>Úroven dusíku</translation>
+    </message>
+    <message>
+        <source>Menu Startowe</source>
+        <translation>Úvodní menu</translation>
+    </message>
+    <message>
+        <source>Zabieg zdefiniowany</source>
+        <translation>Definovany zákrok</translation>
+    </message>
+    <message>
+        <source>Opcje</source>
+        <translation>Možnosti</translation>
+    </message>
+    <message>
+        <source>Informacje</source>
+        <translation>Informace</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
     <message encoding="UTF-8">
         <source>Upłynęło %1 dni od planowanego przeglądu</source>
-        <translation>It is %1 days after the scheduled service</translation>
+        <translation>To je %1 dní po plánovaném servisní</translation>
     </message>
     <message encoding="UTF-8">
         <source>Do przeglądu pozostało %1 dni</source>
-        <translation>%1 days left for scheduled service</translation>
+        <translation>%1 dny odešel do plánované servisní</translation>
     </message>
     <message encoding="UTF-8">
         <source>Praca ciągła</source>
-        <translation>Continuous operation</translation>
+        <translation>Stála práce</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wybór języka</source>
-        <translation>Select Language</translation>
+        <translation>Vyberte jazyk</translation>
     </message>
     <message encoding="UTF-8">
         <source>Przywracanie ustawień</source>
-        <translation>Restore setting</translation>
+        <translation>Obnovit nastavení</translation>
     </message>
     <message encoding="UTF-8">
         <source>Język</source>
-        <translation>Language</translation>
+        <translation>Jazyk</translation>
     </message>
 </context>
 <context>
     <name>OperationScreen</name>
     <message>
         <source>Bark</source>
-        <translation>Shoulder</translation>
+        <translation>Rameno</translation>
     </message>
     <message>
         <source>Nadgarstek</source>
-        <translation>Wrist</translation>
+        <translation>Zápěstí</translation>
     </message>
     <message>
         <source>Biodro</source>
-        <translation>Hip</translation>
+        <translation>Bok</translation>
     </message>
     <message>
         <source>Kolano</source>
-        <translation>Knee</translation>
+        <translation>Koleno</translation>
     </message>
     <message>
         <source>Kostka</source>
-        <translation>Ankle</translation>
+        <translation>Kotník</translation>
     </message>
     <message>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <source>Stop</source>
-        <translation>Stop</translation>
-    </message>
-    <message>
         <source>Czas zabiegu</source>
-        <translation>Operation time</translation>
+        <translation>Doba zákroku</translation>
     </message>
     <message>
         <source>Poziom azotu</source>
-        <translation>Nitrogen level</translation>
+        <translation>Úroven dusíku</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation>Stop</translation>
     </message>
     <message encoding="UTF-8">
         <source>Praca ciągła</source>
-        <translation>Continuous operation</translation>
+        <translation>Stála práce</translation>
     </message>
     <message encoding="UTF-8">
         <source>Łokieć</source>
-        <translation>Elbow</translation>
+        <translation>Loket</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
     <message encoding="UTF-8">
         <source>Intensywność</source>
-        <translation>Intensity</translation>
+        <translation>Intenzita</translation>
     </message>
     <message encoding="UTF-8">
         <source>Pozostały czas</source>
-        <translation>Time Left</translation>
+        <translation>Zbývající doba</translation>
     </message>
     <message encoding="UTF-8">
         <source>Za mało azotu</source>
-        <translation>The level of nitrogen is to low</translation>
+        <translation>Není dostatek dusíku</translation>
     </message>
 </context>
 <context>
     <name>SelectScreen</name>
     <message>
-        <source>Inten.: %1%, czas: %2</source>
-        <translation>Inten.: %1%, time: %2</translation>
+        <source>Wybierz</source>
+        <translation>Vybrat</translation>
     </message>
     <message>
-        <source>Wybierz</source>
-        <translation>Select</translation>
+        <source>Inten.: %1%, czas: %2</source>
+        <translation>Inten.: %1%, doba: %2s</translation>
     </message>
     <message>
         <source>Wybierz zabieg</source>
-        <translation>Select operation</translation>
+        <translation>Výběr zákrok</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
 </context>
 <context>
@@ -152,7 +153,7 @@
     </message>
     <message>
         <source>Informacje</source>
-        <translation>About</translation>
+        <translation>Informace</translation>
     </message>
     <message>
         <source>www.kriosystem.com.pl</source>
@@ -160,7 +161,7 @@
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
 </context>
 <context>
@@ -187,7 +188,7 @@
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation type="unfinished">Exit</translation>
+        <translation type="unfinished">Vystup</translation>
     </message>
     <message encoding="UTF-8">
         <source>Przegląd</source>
@@ -206,7 +207,7 @@
     </message>
     <message>
         <source>Wybierz</source>
-        <translation>Select</translation>
+        <translation>Vybrat</translation>
     </message>
     <message>
         <source>%</source>
@@ -218,11 +219,11 @@
     </message>
     <message>
         <source>Poziom azotu</source>
-        <translation>Nitrogen level</translation>
+        <translation>Úroven dusíku</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
 </context>
 <context>
@@ -244,24 +245,24 @@
         <translation>Start</translation>
     </message>
     <message>
-        <source>Zabieg</source>
-        <translation>Operation</translation>
-    </message>
-    <message>
         <source>Czas zabiegu</source>
-        <translation>Operation time</translation>
+        <translation>Doba zákroku</translation>
     </message>
     <message>
         <source>Poziom azotu</source>
-        <translation>Nitrogen level</translation>
+        <translation>Úroven dusíku</translation>
+    </message>
+    <message>
+        <source>Zabieg</source>
+        <translation>Zákrok</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
     <message encoding="UTF-8">
         <source>Intensywność</source>
-        <translation>Intensity</translation>
+        <translation>Intenzita</translation>
     </message>
 </context>
 <context>
@@ -271,20 +272,20 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Wybierz zabieg</source>
+        <translation>Výběr zákrok</translation>
+    </message>
+    <message>
         <source>Wybierz</source>
-        <translation>Select</translation>
+        <translation>Vybrat</translation>
     </message>
     <message>
         <source>Inten.: ??%, Czas: ??:??</source>
-        <translation>Inten.: ??%, time: ??:??</translation>
-    </message>
-    <message>
-        <source>Wybierz zabieg</source>
-        <translation>Select operation</translation>
+        <translation>Inten.: ??%, doba: ??:??</translation>
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation>Exit</translation>
+        <translation>Výstup</translation>
     </message>
 </context>
 <context encoding="UTF-8">
@@ -339,7 +340,7 @@
     </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
-        <translation type="unfinished">Exit</translation>
+        <translation type="unfinished">Vystup</translation>
     </message>
     <message encoding="UTF-8">
         <source>Pełna butla:</source>

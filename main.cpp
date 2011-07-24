@@ -38,10 +38,12 @@ int main(int argc, char ** argv)
 	//Reading language settings and translator installing
         QSettings settings(UserConfigFileName, QSettings::IniFormat);
         QSettings system(SysConfigFileName, QSettings::IniFormat);
+	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
 	QTranslator translator;
 	QString language = settings.value("language", "pl").toString();
 	if (language == "en") {translator.load("kriosan_en");qDebug("angielski");}
 	if (language == "de") translator.load("kriosan_de");
+	if (language == "cz") translator.load("kriosan_cz");
 	if (language != "pl") app.installTranslator(&translator);
 
 

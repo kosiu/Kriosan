@@ -47,27 +47,27 @@ SensorScreen::SensorScreen(Filter* filterArg, Buzzer* buzzerArg,QWidget *parent,
 
 void SensorScreen::levelVoltage(int value)
 {
-	QString text = QString(trUtf8(" Poziomu azotu (napięcie): %1V")).arg(value/16e3,0,'G',3);
+	QString text = QString(" Poziomu azotu (napięcie): %1V").arg(value/16e3,0,'G',3);
 	levelVoltageLabel->setText(text);
 
 	int min = emptyBottleEdit->value() * 16000.0;
 	int max =  fullBottleEdit->value() * 16000.0;
 	value = (100 * (value - min)) / (max - min);
 	if (value>100) value = 100; if (value<0) value = 0;
-	text = QString(trUtf8(" Poziom azotu: %1% ")).arg(value);
+	text = QString(" Poziom azotu: %1% ").arg(value);
 	levellabel->setText(text);
 
 }
 
 void SensorScreen::temperatureVoltage(float temp)
 {
-	QString text = QString(trUtf8(" Termometr: %1K")).arg(temp,0,'G',3);
+	QString text = QString(" Termometr: %1K").arg(temp,0,'G',3);
 	temperatureLabel->setText(text);
 }
 
 void SensorScreen::keyVoltage(float voltage)
 {	
-	QString text = QString(trUtf8(" Klucz serwisowy: %1V")).arg(voltage,0,'G',3);
+	QString text = QString(" Klucz serwisowy: %1V").arg(voltage,0,'G',3);
 	serviceKeyLabel->setText(text);
 }
 

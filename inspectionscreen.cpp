@@ -38,8 +38,8 @@ InspectionScreen::InspectionScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f
 
 void InspectionScreen::changeSelectName(QWidget * old, QWidget * now)
 {
-	if (now==inspectionDateEdit) selectLabel->setText(trUtf8("Zapisz"));
-	else if  (now==dateTimeEdit) selectLabel->setText(trUtf8("Ustaw"));
+	if (now==inspectionDateEdit) selectLabel->setText("Zapisz");
+	else if  (now==dateTimeEdit) selectLabel->setText("Ustaw");
 }
 
 void InspectionScreen::keyPressEvent( QKeyEvent * event )

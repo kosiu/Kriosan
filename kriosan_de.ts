@@ -7,46 +7,15 @@
         <translation>Ausgang</translation>
     </message>
 </context>
-<context>
-    <name>InspectionScreen</name>
-    <message>
-        <source>Zapisz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ustaw</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
+<context encoding="UTF-8">
     <name>MenuScreen</name>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
-    </message>
     <message>
         <source>Wybierz</source>
         <translation>Auswähl</translation>
     </message>
     <message>
-        <source>Poziom azotu:</source>
-        <translation type="obsolete">Niveau des Stickstoffes:</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Upłynęło %1 dni od planowanego przeglądu</source>
-        <translation>Die %1 Tage sind gegen dem geplanten Durchsehen vergangen</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Do przeglądu pozostało %1 dni</source>
-        <translation>Bis zu dem Durchsehen sind die %1 Tage übriggeblieben</translation>
-    </message>
-    <message>
         <source>Menu Startowe</source>
         <translation>Start Menü</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Praca ciągła</source>
-        <translation>Ständige Arbeit</translation>
     </message>
     <message>
         <source>Zabieg zdefiniowany</source>
@@ -56,6 +25,30 @@
         <source>Opcje</source>
         <translation>Optionen</translation>
     </message>
+    <message>
+        <source>Informacje</source>
+        <translation>Informationen</translation>
+    </message>
+    <message>
+        <source>Poziom azotu</source>
+        <translation>Niveau des Stickstoffes</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Upłynęło %1 dni od planowanego przeglądu</source>
+        <translation>Die %1 Tage sind gegen dem geplanten Durchsehen vergangen</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Do przeglądu pozostało %1 dni</source>
+        <translation>Bis zu dem Durchsehen sind die %1 Tage übriggeblieben</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Praca ciągła</source>
+        <translation>Ständige Arbeit</translation>
+    </message>
     <message encoding="UTF-8">
         <source>Wybór języka</source>
         <translation>Wahl der Zunge</translation>
@@ -64,52 +57,16 @@
         <source>Przywracanie ustawień</source>
         <translation>Wiederherstellen des Stellens</translation>
     </message>
-    <message>
-        <source>Informacje</source>
-        <translation>Informationen</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Termin przeglądu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Kalibracja</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message encoding="UTF-8">
         <source>Język</source>
         <translation>Zunge</translation>
     </message>
-    <message>
-        <source>Polski</source>
-        <translation>Polnisch</translation>
-    </message>
-    <message>
-        <source>Angielski</source>
-        <translation>Englisch</translation>
-    </message>
-    <message>
-        <source>Niemiecki</source>
-        <translation>Deutsche</translation>
-    </message>
-    <message>
-        <source>Poziom azotu</source>
-        <translation>Niveau des Stickstoffes</translation>
-    </message>
 </context>
 <context>
     <name>OperationScreen</name>
-    <message encoding="UTF-8">
-        <source>Praca ciągła</source>
-        <translation>Ständige Arbeit</translation>
-    </message>
     <message>
         <source>Bark</source>
         <translation>Schulter</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Łokieć</source>
-        <translation>Ellenbogen</translation>
     </message>
     <message>
         <source>Nadgarstek</source>
@@ -127,61 +84,49 @@
         <source>Kostka</source>
         <translation>Knöchelchen</translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
-    </message>
     <message>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <source>Czas zabiegu:</source>
-        <translation type="obsolete">Zeit der Behandlun:</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Intensywność:</source>
-        <translation type="obsolete">Intensität:</translation>
-    </message>
-    <message>
-        <source>Poziom azotu:</source>
-        <translation type="obsolete">Niveau des Stickstoffes:</translation>
-    </message>
-    <message>
         <source>Stop</source>
         <translation>Stop</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Pozostały czas:</source>
-        <translation type="obsolete">Geblieben Zeit:</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Za mało azotu</source>
-        <translation type="unfinished">Stickstoff fehlt</translation>
     </message>
     <message>
         <source>Czas zabiegu</source>
         <translation>Zeit der Behandlun</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Intensywność</source>
-        <translation>Intensität</translation>
     </message>
     <message>
         <source>Poziom azotu</source>
         <translation>Niveau des Stickstoffes</translation>
     </message>
     <message encoding="UTF-8">
-        <source>Pozostały czas</source>
-        <translation>Geblieben Zeit</translation>
+        <source>Praca ciągła</source>
+        <translation>Ständige Arbeit</translation>
     </message>
-</context>
-<context>
-    <name>SelectScreen</name>
+    <message encoding="UTF-8">
+        <source>Łokieć</source>
+        <translation>Ellenbogen</translation>
+    </message>
     <message encoding="UTF-8">
         <source>Wyjście</source>
         <translation>Ausgang</translation>
     </message>
+    <message encoding="UTF-8">
+        <source>Intensywność</source>
+        <translation>Intensität</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Pozostały czas</source>
+        <translation>Geblieben Zeit</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Za mało azotu</source>
+        <translation>Stickstoff fehlt</translation>
+    </message>
+</context>
+<context>
+    <name>SelectScreen</name>
     <message>
         <source>Inten.: %1%, czas: %2</source>
         <translation>Inten.: %1%, zeit: %2</translation>
@@ -194,24 +139,9 @@
         <source>Wybierz zabieg</source>
         <translation>Behandlung</translation>
     </message>
-</context>
-<context>
-    <name>SensorScreen</name>
     <message encoding="UTF-8">
-        <source> Poziomu azotu (napięcie): %1V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Poziom azotu: %1% </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Termometr: %1K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Klucz serwisowy: %1V</source>
-        <translation type="unfinished"></translation>
+        <source>Wyjście</source>
+        <translation>Ausgang</translation>
     </message>
 </context>
 <context>
@@ -224,13 +154,13 @@
         <source>Informacje</source>
         <translation>Informationen</translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
-    </message>
     <message>
         <source>www.kriosystem.com.pl</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation>Ausgang</translation>
     </message>
 </context>
 <context>
@@ -243,28 +173,28 @@
         <source>Zapisz</source>
         <translation type="unfinished"></translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation type="unfinished">Ausgang</translation>
-    </message>
     <message>
         <source>Aktualna data i czas:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Przegląd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>dd MMM yyyy HH:mm</source>
         <translation type="unfinished"></translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Data przeglądu:</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>dd MMM yyyy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Przegląd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Data przeglądu:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -278,10 +208,6 @@
         <source>Wybierz</source>
         <translation>Auswähl</translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
-    </message>
     <message>
         <source>%</source>
         <translation type="unfinished"></translation>
@@ -291,12 +217,12 @@
         <translation>Menü</translation>
     </message>
     <message>
-        <source>Poziom azotu:</source>
-        <translation type="obsolete">Niveau des Stickstoffes:</translation>
-    </message>
-    <message>
         <source>Poziom azotu</source>
         <translation>Niveau des Stickstoffes</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation>Ausgang</translation>
     </message>
 </context>
 <context>
@@ -317,22 +243,6 @@
         <source>Start</source>
         <translation>Start</translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
-    </message>
-    <message>
-        <source>Czas zabiegu:</source>
-        <translation type="obsolete">Zeit der Behandlun:</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Intensywność:</source>
-        <translation type="obsolete">Intensität:</translation>
-    </message>
-    <message>
-        <source>Poziom azotu:</source>
-        <translation type="obsolete">Niveau des Stickstoffes:</translation>
-    </message>
     <message>
         <source>Zabieg</source>
         <translation>Behandlung</translation>
@@ -341,13 +251,17 @@
         <source>Czas zabiegu</source>
         <translation>Zeit der Behandlun</translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Intensywność</source>
-        <translation>Intensität</translation>
-    </message>
     <message>
         <source>Poziom azotu</source>
         <translation>Niveau des Stickstoffes</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation>Ausgang</translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Intensywność</source>
+        <translation>Intensität</translation>
     </message>
 </context>
 <context>
@@ -355,14 +269,6 @@
     <message>
         <source>Ekran Informacyjny</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Zabieg:</source>
-        <translation type="obsolete">Behandlung:</translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation>Ausgang</translation>
     </message>
     <message>
         <source>Wybierz</source>
@@ -376,6 +282,10 @@
         <source>Wybierz zabieg</source>
         <translation>Behandlung</translation>
     </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation>Ausgang</translation>
+    </message>
 </context>
 <context encoding="UTF-8">
     <name>sensorScreen</name>
@@ -386,10 +296,6 @@
     <message>
         <source>Zapisz</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message encoding="UTF-8">
-        <source>Wyjście</source>
-        <translation type="unfinished">Ausgang</translation>
     </message>
     <message>
         <source>Poziom azotu: ??%</source>
@@ -407,20 +313,12 @@
         <source>Pusta butla:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message encoding="UTF-8">
-        <source>Pełna butla:</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Minimum:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Klucz serwisowy: ?,???V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message encoding="UTF-8">
-        <source> Poziomu azotu (napięcie): ?,??V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -437,6 +335,18 @@
     </message>
     <message>
         <source>Maksimum:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Wyjście</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source>Pełna butla:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <source> Poziomu azotu (napięcie): ?,??V</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -44,6 +44,10 @@ InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
 		textBrowser->setSource(QUrl("../resources/publicinfo_de.html"));
 		titleBrowser->setSource(QUrl("../resources/kriosystem_de.html"));
 	};
+	if (language == "cz") {
+		textBrowser->setSource(QUrl("../resources/publicinfo_cz.html"));
+		titleBrowser->setSource(QUrl("../resources/kriosystem_cz.html"));
+	};
 	if (language == "pl") {
 		textBrowser->setSource(QUrl("../resources/publicinfo_pl.html"));
 		titleBrowser->setSource(QUrl("../resources/kriosystem_pl.html"));
@@ -65,7 +69,7 @@ InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
 	if(textBrowser->find("$SOFTWARE_VERSION$")||
 	   textBrowser->find("$SOFTWARE_VERSION$",QTextDocument::FindBackward)){
 		textBrowser->cut();
-		QString software_version = system.value("Version", "v1.0.0").toString();
+		QString software_version = system.value("Version", "v1.0.1").toString();
 		textBrowser->insertPlainText(software_version);
 	}
 	if(textBrowser->find("$INSPECTION_DATE$")||

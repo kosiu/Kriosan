@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>infoScreen</class>
- <widget class="QMainWindow" name="infoScreen" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="infoScreen">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,20 +10,12 @@
     <height>320</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>Ekran Informacyjny</string>
+  <property name="windowTitle">
+   <string notr="true">Ekran Informacyjny</string>
   </property>
-  <widget class="QWidget" name="centralwidget" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>240</width>
-     <height>320</height>
-    </rect>
-   </property>
-   <widget class="QWidget" name="layoutWidget" >
-    <property name="geometry" >
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
@@ -30,13 +23,13 @@
       <height>32</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4" >
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <spacer name="horizontalSpacer_4" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>23</width>
          <height>18</height>
@@ -45,28 +38,28 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="menuNameLabel" >
-       <property name="font" >
+      <widget class="QLabel" name="menuNameLabel">
+       <property name="font">
         <font>
          <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
-       <property name="text" >
+       <property name="text">
         <string>Informacje</string>
        </property>
-       <property name="alignment" >
+       <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_5" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>28</width>
          <height>17</height>
@@ -76,8 +69,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="backLabel" >
-    <property name="geometry" >
+   <widget class="QLabel" name="backLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>0</y>
@@ -85,38 +78,38 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="frameShadow" >
+    <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <property name="lineWidth" >
+    <property name="lineWidth">
      <number>1</number>
     </property>
-    <property name="midLineWidth" >
+    <property name="midLineWidth">
      <number>0</number>
     </property>
-    <property name="text" >
+    <property name="text">
      <string>Wyjście</string>
     </property>
-    <property name="scaledContents" >
+    <property name="scaledContents">
      <bool>false</bool>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="selectLabel" >
-    <property name="geometry" >
+   <widget class="QLabel" name="selectLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>290</y>
@@ -124,26 +117,26 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text" >
+    <property name="text">
      <string/>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser" >
-    <property name="geometry" >
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>121</y>
@@ -151,24 +144,24 @@
       <height>171</height>
      </rect>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
     </property>
-    <property name="verticalScrollBarPolicy" >
+    <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAsNeeded</enum>
     </property>
-    <property name="horizontalScrollBarPolicy" >
+    <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="openExternalLinks" >
+    <property name="openExternalLinks">
      <bool>true</bool>
     </property>
-    <property name="openLinks" >
+    <property name="openLinks">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="titleBrowser" >
-    <property name="geometry" >
+   <widget class="QTextBrowser" name="titleBrowser">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>30</y>
@@ -176,27 +169,27 @@
       <height>91</height>
      </rect>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
     </property>
-    <property name="frameShadow" >
+    <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <property name="lineWidth" >
+    <property name="lineWidth">
      <number>0</number>
     </property>
-    <property name="verticalScrollBarPolicy" >
+    <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="horizontalScrollBarPolicy" >
+    <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label" >
-    <property name="geometry" >
+   <widget class="QLabel" name="label">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>300</y>
@@ -204,8 +197,8 @@
       <height>20</height>
      </rect>
     </property>
-    <property name="text" >
-     <string>www.kriosystem.com.pl</string>
+    <property name="text">
+     <string notr="true">www.kriosystem.com.pl</string>
     </property>
    </widget>
   </widget>

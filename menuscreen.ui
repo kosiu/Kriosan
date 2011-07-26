@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Start Screen</string>
+   <string notr="true">Start Screen</string>
   </property>
   <property name="autoFillBackground">
    <bool>true</bool>
@@ -109,8 +109,11 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::NoButtons</enum>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>%</string>
+     <string notr="true">%</string>
     </property>
     <property name="maximum">
      <number>100</number>
@@ -168,7 +171,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Menu</string>
+        <string notr="true">Menu</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

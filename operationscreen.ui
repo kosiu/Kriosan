@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Okno Zabiegu</string>
+   <string notr="true">Okno Zabiegu</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="ScriptWidget" name="timeView">
@@ -94,6 +94,9 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::UpDownArrows</enum>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="accelerated">
      <bool>false</bool>
     </property>
@@ -134,7 +137,7 @@
      <enum>QDateTimeEdit::MinuteSection</enum>
     </property>
     <property name="displayFormat">
-     <string>mm:ss</string>
+     <string notr="true">mm:ss</string>
     </property>
    </widget>
    <widget class="ScriptWidget" name="powerView">
@@ -192,7 +195,7 @@
      <enum>QAbstractSpinBox::UpDownArrows</enum>
     </property>
     <property name="suffix">
-     <string>%</string>
+     <string notr="true">%</string>
     </property>
     <property name="minimum">
      <number>50</number>
@@ -261,8 +264,11 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::NoButtons</enum>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>%</string>
+     <string notr="true">%</string>
     </property>
     <property name="maximum">
      <number>100</number>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Okno Zabiegu</string>
+   <string notr="true">Okno Zabiegu</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="selectLabel">
@@ -35,7 +35,7 @@
      <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="text">
-     <string>Zapisz</string>
+     <string notr="true">Zapisz</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -71,7 +71,7 @@
      <number>0</number>
     </property>
     <property name="text">
-     <string>Wyjście</string>
+     <string notr="true">Wyjście</string>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -111,7 +111,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Poziom azotu: ??%</string>
+        <string notr="true">Poziom azotu: ??%</string>
        </property>
       </widget>
      </item>
@@ -163,7 +163,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Czujniki</string>
+        <string notr="true">Czujniki</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -199,8 +199,11 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>V</string>
+     <string notr="true">V</string>
     </property>
     <property name="maximum">
      <double>2.500000000000000</double>
@@ -222,7 +225,7 @@
      <item>
       <widget class="QLabel" name="emptyBottleLabel">
        <property name="text">
-        <string>Pusta butla:</string>
+        <string notr="true">Pusta butla:</string>
        </property>
       </widget>
      </item>
@@ -254,7 +257,7 @@
      <item>
       <widget class="QLabel" name="fullBottleLabel">
        <property name="text">
-        <string>Pełna butla:</string>
+        <string notr="true">Pełna butla:</string>
        </property>
       </widget>
      </item>
@@ -287,8 +290,11 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>V</string>
+     <string notr="true">V</string>
     </property>
     <property name="maximum">
      <double>2.500000000000000</double>
@@ -323,7 +329,7 @@
      <item>
       <widget class="QLabel" name="serviceKeyMinLabel">
        <property name="text">
-        <string>Minimum:</string>
+        <string notr="true">Minimum:</string>
        </property>
       </widget>
      </item>
@@ -356,8 +362,11 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>V</string>
+     <string notr="true">V</string>
     </property>
     <property name="maximum">
      <double>2.500000000000000</double>
@@ -380,8 +389,11 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>V</string>
+     <string notr="true">V</string>
     </property>
     <property name="maximum">
      <double>2.500000000000000</double>
@@ -421,7 +433,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Klucz serwisowy: ?,???V</string>
+        <string notr="true">Klucz serwisowy: ?,???V</string>
        </property>
       </widget>
      </item>
@@ -453,7 +465,7 @@
      <item>
       <widget class="QLabel" name="levelVoltageLabel">
        <property name="text">
-        <string> Poziomu azotu (napięcie): ?,??V</string>
+        <string notr="true"> Poziomu azotu (napięcie): ?,??V</string>
        </property>
       </widget>
      </item>
@@ -516,7 +528,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Termometr: ???K</string>
+        <string notr="true">Termometr: ???K</string>
        </property>
       </widget>
      </item>
@@ -549,8 +561,11 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
     <property name="suffix">
-     <string>K</string>
+     <string notr="true">K</string>
     </property>
     <property name="decimals">
      <number>0</number>
@@ -575,7 +590,7 @@
      <item>
       <widget class="QLabel" name="TemperatureThresholdLabel">
        <property name="text">
-        <string>Temperatura progowa:</string>
+        <string notr="true">Temperatura progowa:</string>
        </property>
       </widget>
      </item>
@@ -607,7 +622,7 @@
      <item>
       <widget class="QLabel" name="serviceKeyMaxLabel_2">
        <property name="text">
-        <string>Maksimum:</string>
+        <string notr="true">Maksimum:</string>
        </property>
       </widget>
      </item>

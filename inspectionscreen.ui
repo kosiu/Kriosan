@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>inspectionScreen</class>
- <widget class="QMainWindow" name="inspectionScreen" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="inspectionScreen">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,20 +10,12 @@
     <height>320</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>Okno Zabiegu</string>
+  <property name="windowTitle">
+   <string notr="true">Okno Zabiegu</string>
   </property>
-  <widget class="QWidget" name="centralwidget" >
-   <property name="geometry" >
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>240</width>
-     <height>320</height>
-    </rect>
-   </property>
-   <widget class="Line" name="line1" >
-    <property name="geometry" >
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Line" name="line1">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>110</y>
@@ -30,12 +23,12 @@
       <height>20</height>
      </rect>
     </property>
-    <property name="orientation" >
+    <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="selectLabel" >
-    <property name="geometry" >
+   <widget class="QLabel" name="selectLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>290</y>
@@ -43,26 +36,26 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text" >
-     <string>Zapisz</string>
+    <property name="text">
+     <string notr="true">Zapisz</string>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="backLabel" >
-    <property name="geometry" >
+   <widget class="QLabel" name="backLabel">
+    <property name="geometry">
      <rect>
       <x>150</x>
       <y>0</y>
@@ -70,38 +63,38 @@
       <height>31</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="focusPolicy" >
+    <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
     </property>
-    <property name="frameShape" >
+    <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="frameShadow" >
+    <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <property name="lineWidth" >
+    <property name="lineWidth">
      <number>1</number>
     </property>
-    <property name="midLineWidth" >
+    <property name="midLineWidth">
      <number>0</number>
     </property>
-    <property name="text" >
-     <string>Wyjście</string>
+    <property name="text">
+     <string notr="true">Wyjście</string>
     </property>
-    <property name="scaledContents" >
+    <property name="scaledContents">
      <bool>false</bool>
     </property>
-    <property name="alignment" >
+    <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>50</y>
@@ -109,20 +102,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout" >
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="timeLabel" >
-       <property name="text" >
-        <string>Aktualna data i czas:</string>
+      <widget class="QLabel" name="timeLabel">
+       <property name="text">
+        <string notr="true">Aktualna data i czas:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -132,8 +125,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
@@ -141,13 +134,13 @@
       <height>32</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4" >
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <spacer name="horizontalSpacer_4" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>23</width>
          <height>18</height>
@@ -156,28 +149,28 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="inspectionNameLabel" >
-       <property name="font" >
+      <widget class="QLabel" name="inspectionNameLabel">
+       <property name="font">
         <font>
          <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
-       <property name="text" >
-        <string>Przegląd</string>
+       <property name="text">
+        <string notr="true">Przegląd</string>
        </property>
-       <property name="alignment" >
+       <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_5" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>28</width>
          <height>17</height>
@@ -187,8 +180,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDateTimeEdit" name="dateTimeEdit" >
-    <property name="geometry" >
+   <widget class="QDateTimeEdit" name="dateTimeEdit">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>70</y>
@@ -196,20 +189,23 @@
       <height>41</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="locale" >
-     <locale country="Poland" language="Polish" />
+    <property name="locale">
+     <locale language="Polish" country="Poland"/>
     </property>
-    <property name="displayFormat" >
-     <string>dd MMM yyyy HH:mm</string>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
+    <property name="displayFormat">
+     <string notr="true">dd MMM yyyy HH:mm</string>
     </property>
    </widget>
-   <widget class="Line" name="line1_2" >
-    <property name="geometry" >
+   <widget class="Line" name="line1_2">
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>200</y>
@@ -217,12 +213,12 @@
       <height>20</height>
      </rect>
     </property>
-    <property name="orientation" >
+    <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_2" >
-    <property name="geometry" >
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>140</y>
@@ -230,20 +226,20 @@
       <height>20</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="inspectionLabel" >
-       <property name="text" >
-        <string>Data przeglądu:</string>
+      <widget class="QLabel" name="inspectionLabel">
+       <property name="text">
+        <string notr="true">Data przeglądu:</string>
        </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>17</height>
@@ -253,8 +249,8 @@
      </item>
     </layout>
    </widget>
-   <widget class="QDateEdit" name="inspectionDateEdit" >
-    <property name="geometry" >
+   <widget class="QDateEdit" name="inspectionDateEdit">
+    <property name="geometry">
      <rect>
       <x>10</x>
       <y>160</y>
@@ -262,16 +258,19 @@
       <height>41</height>
      </rect>
     </property>
-    <property name="font" >
+    <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="locale" >
-     <locale country="Poland" language="Polish" />
+    <property name="locale">
+     <locale language="Polish" country="Poland"/>
     </property>
-    <property name="displayFormat" >
-     <string>dd MMM yyyy</string>
+    <property name="specialValueText">
+     <string notr="true"/>
+    </property>
+    <property name="displayFormat">
+     <string notr="true">dd MMM yyyy</string>
     </property>
    </widget>
   </widget>

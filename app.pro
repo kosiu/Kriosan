@@ -65,6 +65,6 @@ DISTFILES += butla.qjs \
     moc.svg
 TRANSLATIONS = kriosan_en.ts \
     kriosan_de.ts \
-    kriosan_cz.ts
-
+    kriosan_cz.ts \
+    kriosan_sk.ts
 

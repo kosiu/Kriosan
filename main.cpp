@@ -44,6 +44,7 @@ int main(int argc, char ** argv)
 	if (language == "en") {translator.load("kriosan_en");qDebug("angielski");}
 	if (language == "de") translator.load("kriosan_de");
 	if (language == "cz") translator.load("kriosan_cz");
+	if (language == "sk") translator.load("kriosan_sk");
 	if (language != "pl") app.installTranslator(&translator);
 
 

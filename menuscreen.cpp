@@ -187,6 +187,10 @@ void MenuScreen::doLanguageView(){
 	menuItem->setIcon(QIcon("../resources/pl.png"));
 	menuItem->setTextAlignment(Qt::AlignHCenter);
 
+	menuItem = new QListWidgetItem("Slovenčina", menuView);
+	menuItem->setIcon(QIcon("../resources/sk.png"));
+	menuItem->setTextAlignment(Qt::AlignHCenter);
+
 	menuView->setCurrentRow(0);
 }
 
@@ -290,6 +294,14 @@ void MenuScreen::keyPressEvent( QKeyEvent * event )
 				//Set Polisch language
 				settings->setValue("language", QString("pl"));
 				qApp->removeTranslator(translator);
+				emit(SendShowMenuScreen(optionView));
+			    break;
+			    case 4:
+				//Set Englisch language
+				settings->setValue("language", QString("sk"));
+				qApp->removeTranslator(translator);
+				translator->load("kriosan_sk");
+				qApp->installTranslator(translator);
 				emit(SendShowMenuScreen(optionView));
 			    break;
 			    settings->sync();

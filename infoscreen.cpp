@@ -73,7 +73,7 @@ InfoScreen::InfoScreen(Buzzer* buzzer, QWidget *parent, Qt::WFlags f)
 	if(textBrowser->find("$SOFTWARE_VERSION$")||
 	   textBrowser->find("$SOFTWARE_VERSION$",QTextDocument::FindBackward)){
 		textBrowser->cut();
-		QString software_version = system.value("Version", "v1.0.2").toString();
+		QString software_version = system.value("Version", "v1.0.4").toString();
 		textBrowser->insertPlainText(software_version);
 	}
 	if(textBrowser->find("$INSPECTION_DATE$")||

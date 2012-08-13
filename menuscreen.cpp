@@ -4,7 +4,7 @@
 // Description: 
 //
 //
-// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009
+// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009, 2012
 //
 // Copyright: See COPYING file that comes with this distribution
 // 
@@ -20,6 +20,7 @@
 #include <QProcess>
 #include <QTime>
 #include <QDate>
+#include <QDebug>
 
 #include "menuscreen.h"
 #include "infoscreen.h"
@@ -116,6 +117,20 @@ void MenuScreen::doMainView()
 			delete messageBox;
 			backLabel->hide();
 
+		}
+
+		//if temperature is larger than 280 C propably sensor is broken or unconected
+		if (filter->brokenTemperatureSensor == true) {
+			QString infText=trUtf8("Grzałka niepodłączona lub uszkodzenie czujnika, proszę skontaktować się z serwisem");
+			QMessageBox* messageBox = new QMessageBox(QMessageBox::Critical, "info", infText, QMessageBox::Cancel );
+			backLabel->show();
+			messageBox->setDefaultButton(QMessageBox::Cancel);
+			messageBox->defaultButton()->setText(trUtf8("Wyjście"));
+			messageBox->setWindowFlags(Qt::FramelessWindowHint);
+			//messageBox->show();
+			messageBox->exec();
+			delete messageBox;
+			backLabel->hide();
 		}
 		noShowed = false;
 	}

@@ -44,7 +44,7 @@ int ADCDevice::singleConversion(int channel)
 #ifdef __arm__
 	result = ( (signed char)buf[0]*256+buf[1] );
 #else
-	result = 10000;
+	result = 32500;
 #endif
 
 	return result;
@@ -101,7 +101,7 @@ void ADCDevice::intervalElapsed()
 #ifdef __arm__
 		emit(channel2(result));
 #else
-		emit(channel2(10000));
+		emit(channel2(30000));//  10000 is around 140 C
 #endif
 		if(numberOfCannels>2) {
 			buf[0] = AIN03;

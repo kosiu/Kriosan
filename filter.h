@@ -4,7 +4,7 @@
 // Description: 
 //
 //
-// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009
+// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009, 2012
 //
 // Copyright: See COPYING file that comes with this distribution
 //
@@ -25,6 +25,10 @@ public:
     Filter(QObject *parent =0);
     ~Filter();
     static ADCDevice adc_read;
+    float mVoltage;
+    float mLevel;
+    float mTemperature;
+    bool brokenTemperatureSensor;
 
 public slots:
     void channel1(int value);

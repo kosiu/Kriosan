@@ -4,7 +4,7 @@
 // Description: 
 //
 //
-// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009
+// Author: Jacek Kosek <jacek.kosek@pwr.wroc.pl>, (C) 2009, 2012
 //
 // Copyright: See COPYING file that comes with this distribution
 //
@@ -17,6 +17,11 @@
 
 Filter::Filter(QObject *parent) : QObject(parent)
 {
+	mVoltage = 0;
+	mLevel = 0;
+	mTemperature = 0;
+	brokenTemperatureSensor = false;
+
 	adc_read.singleConversion(1);
 	connect(&adc_read,SIGNAL(channel1(int)),this,SLOT(channel1(int)));
 	connect(&adc_read,SIGNAL(channel2(int)),this,SLOT(channel2(int)));
@@ -33,6 +38,7 @@ void Filter::channel1(int value)
 {
 	float voltage;
 	voltage = (float)value / 16000.0; 
+	mVoltage = voltage;
 	emit keyValue(voltage);
 }
 
@@ -49,7 +55,8 @@ void Filter::channel2(int value)
 	// R = 1000 * U / (14.19 - U)
 	float temp;
 	temp = 0.01067 * (float)value + 34.0886;
-
+	mTemperature = temp;
+	if (brokenTemperatureSensor == true) temp = -1;
 	emit tempValue(temp);
 }
 
@@ -70,6 +77,7 @@ void Filter::channel3(int value)
 
 	float level = value;
 
+	mLevel = level;
 	emit levelValue(level);
 }
 

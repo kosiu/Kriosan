@@ -63,6 +63,10 @@
         <source>Język</source>
         <translation>Jazyk</translation>
     </message>
+    <message>
+        <source>Grzałka niepodłączona lub uszkodzenie czujnika, proszę skontaktować się z serwisem</source>
+        <translation>The heater is not connected or the temperature sensor is broken, please conntact the service</translation>
+    </message>
 </context>
 <context>
     <name>OperationScreen</name>

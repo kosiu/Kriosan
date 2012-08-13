@@ -81,8 +81,12 @@ int main(int argc, char ** argv)
 	float max = system.value("Key_Max", 2.04).toDouble();
 	float voltage = (value /16) / 1000.0;
 	if(voltage>min && voltage<max) serviceKey = true;
-	qDebug()<<"service"<<serviceKey<<voltage;
+	qDebug()<<"service: "<<serviceKey<<voltage;
 
+	//checking if temperature sensor is connected
+	qDebug()<<"temperature: "<<filter->adc_read.singleConversion(2);
+	if ((value = filter->adc_read.singleConversion(2)) > 32400) filter->brokenTemperatureSensor = true;
+	qDebug()<<"temperature: "<<value;
 
 	//aplication start
 	Buzzer* buzzer;
